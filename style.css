@@ -1,0 +1,236 @@
+/* ================== GLOBAL RESET ================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #fff;
+    color: #222;
+}
+
+/* ================== LINKS ================== */
+a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #bfa13b;
+}
+
+/* ================== HEADER ================== */
+header {
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f9f9;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+.logo a {
+    font-size: 24px;
+    color: #bfa13b;
+    font-weight: bold;
+}
+
+nav a {
+    margin-left: 20px;
+}
+
+/* ================== HAMBURGER MENU ================== */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #bfa13b;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ================== HERO SECTION ================== */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    margin-top: 80px; 
+}
+
+.hero h1 {
+    font-size: 40px;
+    color: #222;
+}
+
+.hero p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #555;
+}
+
+.hero button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: 2px solid #bfa13b;
+    background: transparent;
+    color: #bfa13b;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.hero button:hover {
+    background: #bfa13b;
+    color: #fff;
+}
+
+/* ================== SERVICES SECTION ================== */
+.services {
+    padding: 140px 40px 60px;
+}
+
+.S-heading {
+    font-size: 32px;
+    color: #bfa13b;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+/* Services grid */
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Service Card Styling */
+.service-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    text-align: center;
+    border-top: 4px solid #bfa13b;
+    transition: 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.15);
+}
+
+.service-card i {
+    font-size: 26px;
+    color: #bfa13b;
+    background: rgba(191, 161, 59, 0.15);
+    padding: 18px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px;
+    border: 1px solid rgba(191,161,59,0.3);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.service-card:hover i {
+    background: #bfa13b;
+    color: #fff;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+}
+
+.service-card h2 {
+    font-size: 20px;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.service-card p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* ================== RESPONSIVE GRID ================== */
+@media (max-width: 1200px) {
+    .services-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+    nav.nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background: #fff;
+        display: none;
+        padding: 10px 0;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        border-radius: 0 0 12px 12px;
+    }
+
+    nav.nav-links.active {
+        display: flex;
+        animation: slideDown 0.3s ease forwards;
+    }
+
+    @keyframes slideDown {
+        0% {opacity:0; transform: translateY(-20px);}
+        100% {opacity:1; transform: translateY(0);}
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+
+@media (max-width: 600px) {
+    .services-container {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+}
