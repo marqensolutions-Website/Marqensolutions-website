@@ -1,0 +1,3271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>CCTV & Security Systems | Marqen Solutions</title>
+
+    <meta name="description"
+          content="Marqen Solutions provides CCTV installation, security camera systems, monitoring solutions, maintenance and security support for businesses in Saudi Arabia.">
+
+    <meta name="keywords"
+          content="CCTV installation Saudi Arabia, CCTV systems, security cameras, CCTV maintenance, security systems, commercial CCTV, Marqen Solutions">
+
+    <meta name="author"
+          content="Marqen Solutions">
+
+    <meta name="robots"
+          content="index, follow">
+
+    <link rel="icon"
+          type="image/x-icon"
+          href="favicon.ico">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+
+<style>
+
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+:root {
+
+    --navy: #0B1220;
+    --dark-navy: #162033;
+    --yellow: #F5B400;
+    --white: #FFFFFF;
+
+    --light: #F5F7FA;
+    --text: #1D2939;
+    --gray: #667085;
+    --border: #E4E7EC;
+
+    --green: #25D366;
+
+    --container: 1180px;
+
+    --radius: 14px;
+
+    --transition: 0.3s ease;
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family:
+        "Manrope",
+        sans-serif;
+
+    background:
+        var(--white);
+
+    color:
+        var(--text);
+
+    line-height:
+        1.6;
+
+    overflow-x:
+        hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+.container {
+
+    width:
+        calc(100% - 32px);
+
+    max-width:
+        var(--container);
+
+    margin:
+        auto;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    background:
+        rgba(11, 18, 32, 0.98);
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,0.08);
+
+    transition:
+        var(--transition);
+}
+
+header.scrolled {
+
+    box-shadow:
+        0 8px 30px
+        rgba(0,0,0,0.20);
+}
+
+.navbar {
+
+    min-height:
+        72px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        15px;
+}
+
+
+/* =====================================================
+   BRAND
+===================================================== */
+
+.brand {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+}
+
+.brand-logo {
+
+    width:
+        46px;
+
+    height:
+        46px;
+
+    object-fit:
+        contain;
+
+    border-radius:
+        8px;
+
+    background:
+        var(--white);
+}
+
+.brand-name {
+
+    color:
+        var(--white);
+
+    font-size:
+        15px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.5px;
+}
+
+.brand-name span {
+
+    display:
+        block;
+
+    color:
+        var(--yellow);
+
+    font-size:
+        8px;
+
+    letter-spacing:
+        2px;
+
+    line-height:
+        1;
+
+    margin-top:
+        3px;
+}
+
+
+/* =====================================================
+   DESKTOP NAVIGATION
+===================================================== */
+
+.nav-links {
+
+    display:
+        none;
+
+    align-items:
+        center;
+
+    gap:
+        26px;
+}
+
+.nav-links a {
+
+    color:
+        #D0D5DD;
+
+    font-size:
+        12px;
+
+    font-weight:
+        600;
+
+    transition:
+        var(--transition);
+}
+
+.nav-links a:hover {
+    color:
+        var(--yellow);
+}
+
+.nav-links a.active {
+
+    color:
+        var(--yellow);
+
+    position:
+        relative;
+}
+
+.nav-links a.active::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    left:
+        0;
+
+    right:
+        0;
+
+    bottom:
+        -8px;
+
+    height:
+        2px;
+
+    background:
+        var(--yellow);
+}
+
+.nav-whatsapp {
+
+    display:
+        none;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    min-height:
+        40px;
+
+    padding:
+        0 15px;
+
+    border-radius:
+        6px;
+
+    background:
+        var(--yellow);
+
+    color:
+        var(--navy);
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
+}
+
+
+/* =====================================================
+   MOBILE MENU BUTTON
+===================================================== */
+
+.menu-button {
+
+    width:
+        42px;
+
+    height:
+        42px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.18);
+
+    border-radius:
+        8px;
+
+    background:
+        transparent;
+
+    color:
+        var(--white);
+
+    font-size:
+        20px;
+
+    cursor:
+        pointer;
+}
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+.mobile-menu {
+
+    display:
+        none;
+
+    padding:
+        18px 0 25px;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,0.07);
+}
+
+.mobile-menu.active {
+    display:
+        block;
+}
+
+.mobile-menu a {
+
+    display:
+        block;
+
+    padding:
+        12px 0;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,0.06);
+
+    color:
+        var(--white);
+
+    font-size:
+        14px;
+
+    font-weight:
+        600;
+}
+
+.mobile-menu a:hover {
+    color:
+        var(--yellow);
+}
+
+.mobile-menu .mobile-whatsapp {
+
+    margin-top:
+        18px;
+
+    padding:
+        13px;
+
+    text-align:
+        center;
+
+    border:
+        none;
+
+    border-radius:
+        7px;
+
+    background:
+        var(--yellow);
+
+    color:
+        var(--navy);
+}
+
+
+/* =====================================================
+   SERVICE HERO
+===================================================== */
+
+.service-hero {
+
+    padding-top:
+        72px;
+
+    background:
+        var(--navy);
+
+    color:
+        var(--white);
+}
+
+.service-hero-inner {
+
+    min-height:
+        540px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    padding:
+        55px 0 65px;
+}
+
+.breadcrumb {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+
+    margin-bottom:
+        25px;
+
+    color:
+        #98A2B3;
+
+    font-size:
+        10px;
+
+    font-weight:
+        600;
+}
+
+.breadcrumb a:hover {
+    color:
+        var(--yellow);
+}
+
+.breadcrumb .current {
+    color:
+        #D0D5DD;
+}
+
+.service-label {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+    margin-bottom:
+        17px;
+
+    color:
+        var(--yellow);
+
+    font-size:
+        10px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        1.7px;
+
+    text-transform:
+        uppercase;
+}
+
+.service-label::before {
+
+    content:
+        "";
+
+    width:
+        24px;
+
+    height:
+        2px;
+
+    background:
+        var(--yellow);
+}
+
+.service-hero h1 {
+
+    max-width:
+        780px;
+
+    font-size:
+        42px;
+
+    line-height:
+        1.08;
+
+    letter-spacing:
+        -1.5px;
+
+    margin-bottom:
+        20px;
+}
+
+.service-hero h1 span {
+    color:
+        var(--yellow);
+}
+
+.hero-description {
+
+    max-width:
+        650px;
+
+    color:
+        #B7C1CF;
+
+    font-size:
+        13px;
+
+    line-height:
+        1.8;
+
+    margin-bottom:
+        28px;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.hero-buttons {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        stretch;
+
+    gap:
+        10px;
+}
+
+.btn {
+
+    min-height:
+        48px;
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding:
+        0 20px;
+
+    border-radius:
+        7px;
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
+
+    transition:
+        var(--transition);
+}
+
+.btn-primary {
+
+    background:
+        var(--yellow);
+
+    color:
+        var(--navy);
+}
+
+.btn-primary:hover {
+
+    background:
+        #DCA200;
+
+    transform:
+        translateY(-2px);
+}
+
+.btn-secondary {
+
+    border:
+        1px solid
+        rgba(255,255,255,0.25);
+
+    color:
+        var(--white);
+}
+
+.btn-secondary:hover {
+
+    border-color:
+        var(--yellow);
+
+    color:
+        var(--yellow);
+}
+
+
+/* =====================================================
+   HERO STATS
+===================================================== */
+
+.hero-stats {
+
+    margin-top:
+        38px;
+
+    padding-top:
+        22px;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,0.10);
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:
+        20px;
+}
+
+.hero-stat strong {
+
+    display:
+        block;
+
+    color:
+        var(--yellow);
+
+    font-size:
+        20px;
+
+    line-height:
+        1;
+
+    margin-bottom:
+        5px;
+}
+
+.hero-stat span {
+
+    color:
+        #98A2B3;
+
+    font-size:
+        9px;
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        0.7px;
+}
+
+
+/* =====================================================
+   OVERVIEW
+===================================================== */
+
+.overview {
+
+    padding:
+        70px 0;
+
+    background:
+        var(--white);
+}
+
+.overview-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr;
+
+    gap:
+        40px;
+}
+
+.section-label {
+
+    color:
+        #A57800;
+
+    font-size:
+        10px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        1.7px;
+
+    text-transform:
+        uppercase;
+
+    margin-bottom:
+        9px;
+}
+
+.section-title {
+
+    color:
+        var(--navy);
+
+    font-size:
+        29px;
+
+    line-height:
+        1.2;
+
+    letter-spacing:
+        -0.8px;
+
+    margin-bottom:
+        15px;
+}
+
+.section-text {
+
+    color:
+        var(--gray);
+
+    font-size:
+        12px;
+
+    line-height:
+        1.85;
+
+    margin-bottom:
+        14px;
+}
+
+
+/* =====================================================
+   CHECK LIST
+===================================================== */
+
+.check-list {
+
+    list-style:
+        none;
+
+    margin-top:
+        20px;
+}
+
+.check-list li {
+
+    position:
+        relative;
+
+    padding-left:
+        28px;
+
+    margin-bottom:
+        13px;
+
+    color:
+        #475467;
+
+    font-size:
+        11px;
+
+    font-weight:
+        600;
+}
+
+.check-list li::before {
+
+    content:
+        "✓";
+
+    position:
+        absolute;
+
+    left:
+        0;
+
+    top:
+        -2px;
+
+    width:
+        19px;
+
+    height:
+        19px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--yellow);
+
+    color:
+        var(--navy);
+
+    font-size:
+        10px;
+
+    font-weight:
+        900;
+}
+
+
+/* =====================================================
+   SECURITY HIGHLIGHT
+===================================================== */
+
+.highlight-box {
+
+    background:
+        var(--navy);
+
+    border-radius:
+        var(--radius);
+
+    padding:
+        27px 23px;
+
+    color:
+        var(--white);
+}
+
+.highlight-icon {
+
+    width:
+        52px;
+
+    height:
+        52px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    margin-bottom:
+        18px;
+
+    border-radius:
+        10px;
+
+    background:
+        var(--yellow);
+
+    color:
+        var(--navy);
+
+    font-size:
+        23px;
+}
+
+.highlight-box h3 {
+
+    font-size:
+        20px;
+
+    line-height:
+        1.3;
+
+    margin-bottom:
+        10px;
+}
+
+.highlight-box p {
+
+    color:
+        #AAB6C6;
+
+    font-size:
+        11px;
+
+    line-height:
+        1.8;
+
+    margin-bottom:
+        20px;
+}
+
+.highlight-list {
+
+    list-style:
+        none;
+}
+
+.highlight-list li {
+
+    padding:
+        10px 0;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,0.08);
+
+    color:
+        #D0D5DD;
+
+    font-size:
+        10px;
+
+    font-weight:
+        600;
+}
+
+.highlight-list li span {
+
+    color:
+        var(--yellow);
+
+    margin-right:
+        6px;
+}
+
+
+/* =====================================================
+   SECURITY SERVICES
+===================================================== */
+
+.security-section {
+
+    padding:
+        70px 0 80px;
+
+    background:
+        var(--light);
+}
+
+.center-heading {
+
+    text-align:
+        center;
+
+    max-width:
+        680px;
+
+    margin:
+        0 auto 35px;
+}
+
+.center-heading .section-title {
+    margin-bottom:
+        10px;
+}
+
+.center-heading .section-text {
+    margin-bottom:
+        0;
+}
+
+.security-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr;
+
+    gap:
+        13px;
+}
+
+.security-card {
+
+    background:
+        var(--white);
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        12px;
+
+    padding:
+        22px;
+
+    transition:
+        var(--transition);
+}
+
+.security-card:hover {
+
+    transform:
+        translateY(-4px);
+
+    border-color:
+        #D0D5DD;
+
+    box-shadow:
+        0 12px 30px
+        rgba(11,18,32,0.07);
+}
+
+.security-number {
+
+    color:
+        var(--yellow);
+
+    font-size:
+        10px;
+
+    font-weight:
+        900;
+
+    margin-bottom:
+        13px;
+}
+
+.security-card h3 {
+
+    color:
+        var(--navy);
+
+    font-size:
+        16px;
+
+    margin-bottom:
+        7px;
+}
+
+.security-card p {
+
+    color:
+        var(--gray);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.7;
+}
+
+
+/* =====================================================
+   SYSTEM FEATURES
+===================================================== */
+
+.features {
+
+    padding:
+        70px 0;
+
+    background:
+        var(--white);
+}
+
+.features-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr;
+
+    gap:
+        12px;
+}
+
+.feature-card {
+
+    display:
+        flex;
+
+    align-items:
+        flex-start;
+
+    gap:
+        14px;
+
+    padding:
+        20px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        11px;
+
+    background:
+        var(--white);
+
+    transition:
+        var(--transition);
+}
+
+.feature-card:hover {
+
+    border-color:
+        var(--yellow);
+
+    transform:
+        translateY(-3px);
+}
+
+.feature-icon {
+
+    width:
+        39px;
+
+    height:
+        39px;
+
+    flex-shrink:
+        0;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border-radius:
+        8px;
+
+    background:
+        var(--dark-navy);
+
+    color:
+        var(--yellow);
+
+    font-size:
+        16px;
+}
+
+.feature-card h3 {
+
+    color:
+        var(--navy);
+
+    font-size:
+        13px;
+
+    margin-bottom:
+        4px;
+}
+
+.feature-card p {
+
+    color:
+        var(--gray);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.65;
+}
+
+
+/* =====================================================
+   PROCESS
+===================================================== */
+
+.process {
+
+    padding:
+        70px 0 80px;
+
+    background:
+        var(--dark-navy);
+
+    color:
+        var(--white);
+}
+
+.process .section-label {
+    color:
+        var(--yellow);
+}
+
+.process .section-title {
+    color:
+        var(--white);
+}
+
+.process-intro {
+
+    color:
+        #AAB6C6;
+
+    font-size:
+        11px;
+
+    max-width:
+        620px;
+
+    line-height:
+        1.8;
+
+    margin-bottom:
+        35px;
+}
+
+.process-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr;
+
+    gap:
+        15px;
+}
+
+.process-card {
+
+    padding:
+        22px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.08);
+
+    border-radius:
+        11px;
+
+    background:
+        rgba(255,255,255,0.03);
+}
+
+.process-number {
+
+    color:
+        var(--yellow);
+
+    font-size:
+        11px;
+
+    font-weight:
+        900;
+
+    margin-bottom:
+        15px;
+}
+
+.process-card h3 {
+
+    font-size:
+        14px;
+
+    margin-bottom:
+        6px;
+}
+
+.process-card p {
+
+    color:
+        #98A2B3;
+
+    font-size:
+        10px;
+
+    line-height:
+        1.7;
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.cta {
+
+    padding:
+        60px 0;
+
+    background:
+        var(--navy);
+
+    color:
+        var(--white);
+}
+
+.cta-inner {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        22px;
+
+    align-items:
+        flex-start;
+}
+
+.cta-label {
+
+    color:
+        var(--yellow);
+
+    font-size:
+        10px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        1.5px;
+
+    margin-bottom:
+        8px;
+}
+
+.cta h2 {
+
+    font-size:
+        27px;
+
+    line-height:
+        1.2;
+
+    margin-bottom:
+        8px;
+}
+
+.cta p {
+
+    max-width:
+        620px;
+
+    color:
+        #AAB6C6;
+
+    font-size:
+        11px;
+
+    line-height:
+        1.75;
+}
+
+.cta-button {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    min-height:
+        48px;
+
+    padding:
+        0 22px;
+
+    background:
+        var(--yellow);
+
+    color:
+        var(--navy);
+
+    border-radius:
+        7px;
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
+
+    transition:
+        var(--transition);
+}
+
+.cta-button:hover {
+
+    background:
+        #DCA200;
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    background:
+        #070D17;
+
+    color:
+        var(--white);
+
+    padding-top:
+        50px;
+}
+
+.footer-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr;
+
+    gap:
+        32px;
+
+    padding-bottom:
+        35px;
+}
+
+.footer-description {
+
+    max-width:
+        310px;
+
+    margin-top:
+        14px;
+
+    color:
+        #8290A2;
+
+    font-size:
+        11px;
+
+    line-height:
+        1.8;
+}
+
+.footer-title {
+
+    color:
+        var(--white);
+
+    font-size:
+        12px;
+
+    margin-bottom:
+        14px;
+}
+
+.footer-links a {
+
+    display:
+        block;
+
+    color:
+        #8290A2;
+
+    font-size:
+        11px;
+
+    margin-bottom:
+        8px;
+
+    transition:
+        var(--transition);
+}
+
+.footer-links a:hover {
+    color:
+        var(--yellow);
+}
+
+.footer-contact p {
+
+    color:
+        #8290A2;
+
+    font-size:
+        11px;
+
+    line-height:
+        1.7;
+
+    margin-bottom:
+        9px;
+}
+
+.footer-contact strong {
+    color:
+        var(--yellow);
+}
+
+.footer-bottom {
+
+    padding:
+        18px 0;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,0.07);
+
+    color:
+        #647184;
+
+    font-size:
+        9px;
+
+    text-align:
+        center;
+}
+
+
+/* =====================================================
+   WHATSAPP
+===================================================== */
+
+.whatsapp {
+
+    position:
+        fixed;
+
+    right:
+        16px;
+
+    bottom:
+        16px;
+
+    z-index:
+        900;
+
+    width:
+        54px;
+
+    height:
+        54px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--green);
+
+    color:
+        var(--white);
+
+    font-size:
+        21px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0,0,0,0.22);
+
+    transition:
+        var(--transition);
+}
+
+.whatsapp:hover {
+    transform:
+        scale(1.08);
+}
+
+
+/* =====================================================
+   SCROLL REVEAL
+===================================================== */
+
+.reveal {
+
+    opacity:
+        0;
+
+    transform:
+        translateY(20px);
+
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+}
+
+.reveal.show {
+
+    opacity:
+        1;
+
+    transform:
+        translateY(0);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (min-width: 600px) {
+
+    .container {
+        width:
+            calc(100% - 50px);
+    }
+
+    .hero-buttons {
+        flex-direction:
+            row;
+    }
+
+    .btn {
+        width:
+            auto;
+    }
+
+    .hero-stats {
+        grid-template-columns:
+            repeat(4,1fr);
+    }
+
+    .security-grid {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .features-grid {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .process-grid {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns:
+            1.5fr 1fr 1fr;
+    }
+}
+
+
+/* =====================================================
+   LAPTOP
+===================================================== */
+
+@media (min-width: 900px) {
+
+    .container {
+        width:
+            calc(100% - 70px);
+    }
+
+    .menu-button {
+        display:
+            none;
+    }
+
+    .nav-links {
+        display:
+            flex;
+    }
+
+    .nav-whatsapp {
+        display:
+            inline-flex;
+    }
+
+    .mobile-menu {
+        display:
+            none !important;
+    }
+
+    .service-hero-inner {
+        min-height:
+            610px;
+    }
+
+    .service-hero h1 {
+        font-size:
+            60px;
+    }
+
+    .hero-description {
+        font-size:
+            14px;
+    }
+
+    .overview {
+        padding:
+            95px 0;
+    }
+
+    .overview-grid {
+
+        grid-template-columns:
+            1.1fr 0.9fr;
+
+        align-items:
+            center;
+
+        gap:
+            70px;
+    }
+
+    .section-title {
+        font-size:
+            38px;
+    }
+
+    .security-section {
+        padding:
+            90px 0 100px;
+    }
+
+    .security-grid {
+        grid-template-columns:
+            repeat(3,1fr);
+    }
+
+    .features {
+        padding:
+            90px 0;
+    }
+
+    .process {
+        padding:
+            90px 0 100px;
+    }
+
+    .process-grid {
+        grid-template-columns:
+            repeat(4,1fr);
+    }
+
+    .cta-inner {
+
+        flex-direction:
+            row;
+
+        align-items:
+            center;
+
+        justify-content:
+            space-between;
+    }
+
+    .footer-grid {
+        grid-template-columns:
+            1.5fr 1fr 1fr 1fr;
+    }
+
+    .footer-bottom {
+        text-align:
+            left;
+    }
+}
+
+
+/* =====================================================
+   LARGE DESKTOP
+===================================================== */
+
+@media (min-width: 1200px) {
+
+    .container {
+
+        width:
+            min(
+                1180px,
+                calc(100% - 80px)
+            );
+    }
+
+    .service-hero h1 {
+        font-size:
+            68px;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+
+    .container {
+        width:
+            calc(100% - 26px);
+    }
+
+    .brand-logo {
+
+        width:
+            43px;
+
+        height:
+            43px;
+    }
+
+    .brand-name {
+        font-size:
+            14px;
+    }
+
+    .service-hero h1 {
+        font-size:
+            37px;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header id="header">
+
+    <div class="container">
+
+        <nav class="navbar">
+
+
+            <!-- BRAND -->
+
+            <a href="index.html"
+               class="brand">
+
+                <img src="logo.jpeg"
+                     alt="Marqen Solutions Logo"
+                     class="brand-logo">
+
+                <div class="brand-name">
+
+                    MARQEN
+
+                    <span>
+                        SOLUTIONS
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- DESKTOP NAV -->
+
+            <div class="nav-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="services.html"
+                   class="active">
+                    Services
+                </a>
+
+                <a href="index.html#industries">
+                    Industries
+                </a>
+
+                <a href="index.html#projects">
+                    Projects
+                </a>
+
+                <a href="index.html#about">
+                    About
+                </a>
+
+                <a href="index.html#contact">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <a href="https://wa.me/966579547328"
+                   target="_blank"
+                   class="nav-whatsapp">
+
+                    WhatsApp
+
+                </a>
+
+
+                <button class="menu-button"
+                        id="menuButton"
+                        aria-label="Open navigation menu">
+
+                    ☰
+
+                </button>
+
+            </div>
+
+        </nav>
+
+
+        <!-- MOBILE MENU -->
+
+        <div class="mobile-menu"
+             id="mobileMenu">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="index.html#industries">
+                Industries
+            </a>
+
+            <a href="index.html#projects">
+                Projects
+            </a>
+
+            <a href="index.html#about">
+                About
+            </a>
+
+            <a href="index.html#contact">
+                Contact
+            </a>
+
+            <a href="https://wa.me/966579547328"
+               target="_blank"
+               class="mobile-whatsapp">
+
+                WhatsApp Us
+
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="service-hero">
+
+    <div class="container">
+
+        <div class="service-hero-inner">
+
+            <div>
+
+
+                <div class="breadcrumb">
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <span>/</span>
+
+                    <a href="services.html">
+                        Services
+                    </a>
+
+                    <span>/</span>
+
+                    <span class="current">
+                        CCTV & Security
+                    </span>
+
+                </div>
+
+
+                <div class="service-label">
+
+                    CCTV & SECURITY
+
+                </div>
+
+
+                <h1>
+
+                    Smarter
+                    <span>Security</span>
+                    For Your Business
+
+                </h1>
+
+
+                <p class="hero-description">
+
+                    Professional CCTV installation,
+                    security camera systems, monitoring
+                    solutions and maintenance support
+                    designed to help businesses improve
+                    visibility and security.
+
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a href="https://wa.me/966579547328?text=Hello%20Marqen%20Solutions%2C%20I%20need%20CCTV%20and%20security%20services."
+                       target="_blank"
+                       class="btn btn-primary">
+
+                        Discuss Your Requirement
+                        ↗
+
+                    </a>
+
+
+                    <a href="#service-details"
+                       class="btn btn-secondary">
+
+                        Explore Service
+                        ↓
+
+                    </a>
+
+                </div>
+
+
+                <div class="hero-stats">
+
+                    <div class="hero-stat">
+
+                        <strong>
+                            01
+                        </strong>
+
+                        <span>
+                            CCTV
+                        </span>
+
+                    </div>
+
+
+                    <div class="hero-stat">
+
+                        <strong>
+                            02
+                        </strong>
+
+                        <span>
+                            Installation
+                        </span>
+
+                    </div>
+
+
+                    <div class="hero-stat">
+
+                        <strong>
+                            03
+                        </strong>
+
+                        <span>
+                            Monitoring
+                        </span>
+
+                    </div>
+
+
+                    <div class="hero-stat">
+
+                        <strong>
+                            04
+                        </strong>
+
+                        <span>
+                            Maintenance
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     OVERVIEW
+===================================================== -->
+
+<section class="overview"
+         id="service-details">
+
+    <div class="container">
+
+        <div class="overview-grid">
+
+
+            <!-- LEFT -->
+
+            <div class="reveal">
+
+                <div class="section-label">
+
+                    THE SERVICE
+
+                </div>
+
+
+                <h2 class="section-title">
+
+                    Keep An Eye On
+                    What Matters.
+
+                </h2>
+
+
+                <p class="section-text">
+
+                    A reliable CCTV system can give your
+                    business better visibility across shops,
+                    commercial spaces, facilities and
+                    operational areas.
+
+                </p>
+
+
+                <p class="section-text">
+
+                    Marqen Solutions provides CCTV and
+                    security system installation, setup,
+                    maintenance and technical support
+                    based on your business requirements.
+
+                </p>
+
+
+                <ul class="check-list">
+
+                    <li>
+                        CCTV camera installation
+                    </li>
+
+                    <li>
+                        Security system setup
+                    </li>
+
+                    <li>
+                        Camera positioning support
+                    </li>
+
+                    <li>
+                        System troubleshooting
+                    </li>
+
+                    <li>
+                        CCTV maintenance and support
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- RIGHT -->
+
+            <div class="highlight-box reveal">
+
+                <div class="highlight-icon">
+                    ◉
+                </div>
+
+
+                <h3>
+
+                    Business
+                    Security Visibility
+
+                </h3>
+
+
+                <p>
+
+                    We help businesses implement practical
+                    CCTV solutions that improve visibility
+                    across important areas of their
+                    operations.
+
+                </p>
+
+
+                <ul class="highlight-list">
+
+                    <li>
+                        <span>✓</span>
+                        CCTV Installation
+                    </li>
+
+                    <li>
+                        <span>✓</span>
+                        Camera Setup
+                    </li>
+
+                    <li>
+                        <span>✓</span>
+                        Monitoring Solutions
+                    </li>
+
+                    <li>
+                        <span>✓</span>
+                        System Troubleshooting
+                    </li>
+
+                    <li>
+                        <span>✓</span>
+                        Maintenance Support
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CCTV SERVICES
+===================================================== -->
+
+<section class="security-section">
+
+    <div class="container">
+
+
+        <div class="center-heading reveal">
+
+            <div class="section-label">
+
+                SECURITY SOLUTIONS
+
+            </div>
+
+
+            <h2 class="section-title">
+
+                CCTV & Security Services
+
+            </h2>
+
+
+            <p class="section-text">
+
+                Security camera and CCTV support for
+                businesses, shops, commercial spaces and
+                facilities.
+
+            </p>
+
+        </div>
+
+
+        <div class="security-grid">
+
+
+            <article class="security-card reveal">
+
+                <div class="security-number">
+                    01
+                </div>
+
+                <h3>
+                    CCTV Installation
+                </h3>
+
+                <p>
+
+                    Professional installation and setup
+                    of CCTV camera systems for your
+                    business environment.
+
+                </p>
+
+            </article>
+
+
+            <article class="security-card reveal">
+
+                <div class="security-number">
+                    02
+                </div>
+
+                <h3>
+                    Security Cameras
+                </h3>
+
+                <p>
+
+                    Camera solutions designed to provide
+                    visibility across important areas
+                    of your property.
+
+                </p>
+
+            </article>
+
+
+            <article class="security-card reveal">
+
+                <div class="security-number">
+                    03
+                </div>
+
+                <h3>
+                    Camera Positioning
+                </h3>
+
+                <p>
+
+                    Support with camera placement and
+                    positioning to improve area coverage.
+
+                </p>
+
+            </article>
+
+
+            <article class="security-card reveal">
+
+                <div class="security-number">
+                    04
+                </div>
+
+                <h3>
+                    CCTV System Setup
+                </h3>
+
+                <p>
+
+                    Setup and configuration support for
+                    CCTV equipment and related systems.
+
+                </p>
+
+            </article>
+
+
+            <article class="security-card reveal">
+
+                <div class="security-number">
+                    05
+                </div>
+
+                <h3>
+                    Troubleshooting
+                </h3>
+
+                <p>
+
+                    Technical support for CCTV system
+                    problems and operational issues.
+
+                </p>
+
+            </article>
+
+
+            <article class="security-card reveal">
+
+                <div class="security-number">
+                    06
+                </div>
+
+                <h3>
+                    CCTV Maintenance
+                </h3>
+
+                <p>
+
+                    Ongoing maintenance and technical
+                    support to help keep your security
+                    system operating properly.
+
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FEATURES
+===================================================== -->
+
+<section class="features">
+
+    <div class="container">
+
+
+        <div class="center-heading reveal">
+
+            <div class="section-label">
+
+                SECURITY SUPPORT
+
+            </div>
+
+
+            <h2 class="section-title">
+
+                What Your CCTV System Can Cover
+
+            </h2>
+
+
+            <p class="section-text">
+
+                CCTV solutions can be planned around the
+                areas that matter most to your business.
+
+            </p>
+
+        </div>
+
+
+        <div class="features-grid">
+
+
+            <article class="feature-card reveal">
+
+                <div class="feature-icon">
+                    ◉
+                </div>
+
+                <div>
+
+                    <h3>
+                        Entrances & Exits
+                    </h3>
+
+                    <p>
+
+                        Monitor important access points
+                        around your business.
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="feature-card reveal">
+
+                <div class="feature-icon">
+                    □
+                </div>
+
+                <div>
+
+                    <h3>
+                        Shops & Retail Areas
+                    </h3>
+
+                    <p>
+
+                        Improve visibility across customer
+                        and operational areas.
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="feature-card reveal">
+
+                <div class="feature-icon">
+                    ▣
+                </div>
+
+                <div>
+
+                    <h3>
+                        Work Areas
+                    </h3>
+
+                    <p>
+
+                        Monitor selected operational areas
+                        within your facility.
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="feature-card reveal">
+
+                <div class="feature-icon">
+                    +
+                </div>
+
+                <div>
+
+                    <h3>
+                        Storage Areas
+                    </h3>
+
+                    <p>
+
+                        Add visibility to storage and
+                        equipment areas.
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="feature-card reveal">
+
+                <div class="feature-icon">
+                    ↑
+                </div>
+
+                <div>
+
+                    <h3>
+                        Parking Areas
+                    </h3>
+
+                    <p>
+
+                        Support visibility around suitable
+                        outdoor and parking areas.
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="feature-card reveal">
+
+                <div class="feature-icon">
+                    ●
+                </div>
+
+                <div>
+
+                    <h3>
+                        Critical Areas
+                    </h3>
+
+                    <p>
+
+                        Focus CCTV coverage on areas that
+                        are important to your operation.
+
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROCESS
+===================================================== -->
+
+<section class="process">
+
+    <div class="container">
+
+
+        <div class="section-label reveal">
+
+            HOW IT WORKS
+
+        </div>
+
+
+        <h2 class="section-title reveal">
+
+            A Simple Security Setup Process
+
+        </h2>
+
+
+        <p class="process-intro reveal">
+
+            We start by understanding your property and
+            security requirements, then help determine an
+            appropriate CCTV solution.
+
+        </p>
+
+
+        <div class="process-grid">
+
+
+            <article class="process-card reveal">
+
+                <div class="process-number">
+                    01
+                </div>
+
+                <h3>
+                    Understand
+                </h3>
+
+                <p>
+
+                    Tell us about your business, property
+                    and security requirements.
+
+                </p>
+
+            </article>
+
+
+            <article class="process-card reveal">
+
+                <div class="process-number">
+                    02
+                </div>
+
+                <h3>
+                    Assess
+                </h3>
+
+                <p>
+
+                    We identify suitable areas for CCTV
+                    coverage and system requirements.
+
+                </p>
+
+            </article>
+
+
+            <article class="process-card reveal">
+
+                <div class="process-number">
+                    03
+                </div>
+
+                <h3>
+                    Install
+                </h3>
+
+                <p>
+
+                    CCTV cameras and related equipment
+                    are installed and configured.
+
+                </p>
+
+            </article>
+
+
+            <article class="process-card reveal">
+
+                <div class="process-number">
+                    04
+                </div>
+
+                <h3>
+                    Support
+                </h3>
+
+                <p>
+
+                    We provide technical support and
+                    maintenance when required.
+
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <div class="cta-inner">
+
+
+            <div>
+
+                <div class="cta-label">
+
+                    CCTV & SECURITY
+
+                </div>
+
+
+                <h2>
+
+                    Need Better
+                    Security Visibility?
+
+                </h2>
+
+
+                <p>
+
+                    Tell us about your property and CCTV
+                    requirements. We'll help you determine
+                    the right service for your business.
+
+                </p>
+
+            </div>
+
+
+            <a href="https://wa.me/966579547328?text=Hello%20Marqen%20Solutions%2C%20I%20need%20CCTV%20and%20security%20services."
+               target="_blank"
+               class="cta-button">
+
+                Contact Us on WhatsApp
+                ↗
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+
+            <div>
+
+                <a href="index.html"
+                   class="brand">
+
+                    <img src="logo.jpeg"
+                         alt="Marqen Solutions Logo"
+                         class="brand-logo">
+
+                    <div class="brand-name">
+
+                        MARQEN
+
+                        <span>
+                            SOLUTIONS
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+                <p class="footer-description">
+
+                    Technical installation,
+                    maintenance and business
+                    support services in Saudi Arabia.
+
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3 class="footer-title">
+                    Quick Links
+                </h3>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="services.html">
+                    Services
+                </a>
+
+                <a href="index.html#about">
+                    About
+                </a>
+
+                <a href="index.html#contact">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3 class="footer-title">
+                    Services
+                </h3>
+
+                <a href="laundry-equipment.html">
+                    Laundry Equipment
+                </a>
+
+                <a href="electrical-services.html">
+                    Electrical Services
+                </a>
+
+                <a href="cctv-security.html">
+                    CCTV & Security
+                </a>
+
+                <a href="fire-alarm.html">
+                    Fire Alarm
+                </a>
+
+                <a href="shop-setup.html">
+                    Shop Setup
+                </a>
+
+                <a href="maintenance.html">
+                    Maintenance
+                </a>
+
+            </div>
+
+
+            <div class="footer-contact">
+
+                <h3 class="footer-title">
+                    Contact
+                </h3>
+
+                <p>
+
+                    <strong>
+                        Location
+                    </strong>
+
+                    <br>
+
+                    Saudi Arabia
+
+                </p>
+
+
+                <p>
+
+                    <strong>
+                        Phone
+                    </strong>
+
+                    <br>
+
+                    <a href="tel:+966579547328">
+
+                        057 954 7328
+
+                    </a>
+
+                </p>
+
+
+                <p>
+
+                    <strong>
+                        WhatsApp
+                    </strong>
+
+                    <br>
+
+                    <a href="https://wa.me/966579547328"
+                       target="_blank">
+
+                        Chat with us
+
+                    </a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            ©
+            <span id="year"></span>
+            Marqen Solutions.
+            All Rights Reserved.
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     FLOATING WHATSAPP
+===================================================== -->
+
+<a href="https://wa.me/966579547328?text=Hello%20Marqen%20Solutions%2C%20I%20need%20CCTV%20and%20security%20services."
+   target="_blank"
+   class="whatsapp"
+   aria-label="Contact Marqen Solutions on WhatsApp">
+
+    ☎
+
+</a>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+const menuButton =
+    document.getElementById("menuButton");
+
+const mobileMenu =
+    document.getElementById("mobileMenu");
+
+
+menuButton.addEventListener(
+    "click",
+    function() {
+
+        mobileMenu.classList.toggle(
+            "active"
+        );
+
+        if (
+            mobileMenu.classList.contains(
+                "active"
+            )
+        ) {
+
+            menuButton.textContent =
+                "✕";
+
+        } else {
+
+            menuButton.textContent =
+                "☰";
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   CLOSE MOBILE MENU
+===================================================== */
+
+const mobileLinks =
+    mobileMenu.querySelectorAll("a");
+
+
+mobileLinks.forEach(
+    function(link) {
+
+        link.addEventListener(
+            "click",
+            function() {
+
+                mobileMenu.classList.remove(
+                    "active"
+                );
+
+                menuButton.textContent =
+                    "☰";
+
+            }
+        );
+
+    }
+);
+
+
+/* =====================================================
+   HEADER SCROLL
+===================================================== */
+
+const header =
+    document.getElementById("header");
+
+
+window.addEventListener(
+    "scroll",
+    function() {
+
+        if (
+            window.scrollY > 30
+        ) {
+
+            header.classList.add(
+                "scrolled"
+            );
+
+        } else {
+
+            header.classList.remove(
+                "scrolled"
+            );
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   SCROLL REVEAL
+===================================================== */
+
+const revealElements =
+    document.querySelectorAll(".reveal");
+
+
+const observer =
+    new IntersectionObserver(
+
+        function(entries, observer) {
+
+            entries.forEach(
+                function(entry) {
+
+                    if (
+                        entry.isIntersecting
+                    ) {
+
+                        entry.target.classList.add(
+                            "show"
+                        );
+
+                        observer.unobserve(
+                            entry.target
+                        );
+
+                    }
+
+                }
+            );
+
+        },
+
+        {
+            threshold: 0.10
+        }
+
+    );
+
+
+revealElements.forEach(
+    function(element) {
+
+        observer.observe(
+            element
+        );
+
+    }
+);
+
+
+/* =====================================================
+   CURRENT YEAR
+===================================================== */
+
+document.getElementById(
+    "year"
+).textContent =
+    new Date().getFullYear();
+
+</script>
+
+
+</body>
+</html>

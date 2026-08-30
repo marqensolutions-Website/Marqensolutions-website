@@ -1,0 +1,2526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =====================================================
+         BASIC SEO
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Services | Marqen Solutions</title>
+
+    <meta name="description"
+          content="Explore Marqen Solutions services including laundry equipment, electrical services, CCTV and security, fire alarm systems, shop setup and maintenance services in Saudi Arabia.">
+
+    <meta name="keywords"
+          content="Marqen Solutions, services Saudi Arabia, laundry equipment, electrical services, CCTV, security, fire alarm, shop setup, maintenance">
+
+    <meta name="author"
+          content="Marqen Solutions">
+
+    <meta name="robots"
+          content="index, follow">
+
+
+    <!-- FAVICON -->
+
+    <link rel="icon"
+          type="image/x-icon"
+          href="favicon.ico">
+
+
+    <!-- GOOGLE FONT -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+
+    <!-- =====================================================
+         CSS
+    ====================================================== -->
+
+    <style>
+
+        /* =====================================================
+           COLOR VARIABLES
+        ====================================================== */
+
+        :root {
+
+            --navy: #0B1220;
+            --dark-navy: #162033;
+            --yellow: #F5B400;
+            --white: #FFFFFF;
+
+            --light: #F5F7FA;
+            --text: #1D2939;
+            --gray: #667085;
+            --border: #E4E7EC;
+
+            --green: #25D366;
+
+            --container: 1180px;
+
+            --radius: 14px;
+
+            --transition: 0.3s ease;
+        }
+
+
+        /* =====================================================
+           RESET
+        ====================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            font-family: "Manrope", sans-serif;
+
+            background: var(--white);
+
+            color: var(--text);
+
+            line-height: 1.6;
+
+            overflow-x: hidden;
+        }
+
+
+        img {
+
+            display: block;
+
+            max-width: 100%;
+        }
+
+
+        a {
+
+            text-decoration: none;
+
+            color: inherit;
+        }
+
+
+        button {
+
+            font-family: inherit;
+        }
+
+
+        .container {
+
+            width: calc(100% - 32px);
+
+            max-width: var(--container);
+
+            margin: auto;
+        }
+
+
+        /* =====================================================
+           HEADER
+        ====================================================== */
+
+        header {
+
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+
+            z-index: 1000;
+
+            background: rgba(11, 18, 32, 0.98);
+
+            border-bottom:
+                1px solid rgba(255, 255, 255, 0.08);
+
+            transition: var(--transition);
+        }
+
+
+        header.scrolled {
+
+            box-shadow:
+                0 8px 30px rgba(0, 0, 0, 0.20);
+        }
+
+
+        .navbar {
+
+            min-height: 72px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 15px;
+        }
+
+
+        /* =====================================================
+           BRAND
+        ====================================================== */
+
+        .brand {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+        }
+
+
+        .brand-logo {
+
+            width: 46px;
+
+            height: 46px;
+
+            object-fit: contain;
+
+            border-radius: 8px;
+
+            background: var(--white);
+        }
+
+
+        .brand-name {
+
+            color: var(--white);
+
+            font-size: 15px;
+
+            font-weight: 800;
+
+            letter-spacing: 0.5px;
+        }
+
+
+        .brand-name span {
+
+            display: block;
+
+            color: var(--yellow);
+
+            font-size: 8px;
+
+            letter-spacing: 2px;
+
+            line-height: 1;
+
+            margin-top: 3px;
+        }
+
+
+        /* =====================================================
+           DESKTOP NAVIGATION
+        ====================================================== */
+
+        .nav-links {
+
+            display: none;
+
+            align-items: center;
+
+            gap: 26px;
+        }
+
+
+        .nav-links a {
+
+            color: #D0D5DD;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            transition: var(--transition);
+        }
+
+
+        .nav-links a:hover {
+
+            color: var(--yellow);
+        }
+
+
+        .nav-links a.active {
+
+            color: var(--yellow);
+
+            position: relative;
+        }
+
+
+        .nav-links a.active::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            right: 0;
+
+            bottom: -8px;
+
+            height: 2px;
+
+            background: var(--yellow);
+        }
+
+
+        .nav-whatsapp {
+
+            display: none;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-height: 40px;
+
+            padding: 0 15px;
+
+            border-radius: 6px;
+
+            background: var(--yellow);
+
+            color: var(--navy);
+
+            font-size: 11px;
+
+            font-weight: 800;
+        }
+
+
+        /* =====================================================
+           MOBILE MENU BUTTON
+        ====================================================== */
+
+        .menu-button {
+
+            width: 42px;
+
+            height: 42px;
+
+            display: grid;
+
+            place-items: center;
+
+            border:
+                1px solid rgba(255,255,255,0.18);
+
+            border-radius: 8px;
+
+            background: transparent;
+
+            color: var(--white);
+
+            font-size: 20px;
+
+            cursor: pointer;
+        }
+
+
+        /* =====================================================
+           MOBILE MENU
+        ====================================================== */
+
+        .mobile-menu {
+
+            display: none;
+
+            padding: 18px 0 25px;
+
+            border-top:
+                1px solid rgba(255,255,255,0.07);
+        }
+
+
+        .mobile-menu.active {
+
+            display: block;
+        }
+
+
+        .mobile-menu a {
+
+            display: block;
+
+            padding: 12px 0;
+
+            border-bottom:
+                1px solid rgba(255,255,255,0.06);
+
+            color: var(--white);
+
+            font-size: 14px;
+
+            font-weight: 600;
+        }
+
+
+        .mobile-menu a:hover {
+
+            color: var(--yellow);
+        }
+
+
+        .mobile-menu .mobile-whatsapp {
+
+            margin-top: 18px;
+
+            padding: 13px;
+
+            text-align: center;
+
+            border: none;
+
+            border-radius: 7px;
+
+            background: var(--yellow);
+
+            color: var(--navy);
+        }
+
+
+        /* =====================================================
+           PAGE HEADER
+        ====================================================== */
+
+        .page-header {
+
+            padding-top: 72px;
+
+            background: var(--navy);
+
+            color: var(--white);
+        }
+
+
+        .page-header-inner {
+
+            min-height: 360px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 60px 0;
+        }
+
+
+        .breadcrumb {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 8px;
+
+            margin-bottom: 20px;
+
+            color: #98A2B3;
+
+            font-size: 11px;
+
+            font-weight: 600;
+        }
+
+
+        .breadcrumb a {
+
+            transition: var(--transition);
+        }
+
+
+        .breadcrumb a:hover {
+
+            color: var(--yellow);
+        }
+
+
+        .breadcrumb span {
+
+            color: #667085;
+        }
+
+
+        .page-label {
+
+            color: var(--yellow);
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 12px;
+        }
+
+
+        .page-header h1 {
+
+            font-size: 42px;
+
+            line-height: 1.1;
+
+            letter-spacing: -1.5px;
+
+            margin-bottom: 16px;
+        }
+
+
+        .page-header h1 span {
+
+            color: var(--yellow);
+        }
+
+
+        .page-header-description {
+
+            max-width: 650px;
+
+            margin: auto;
+
+            color: #B7C1CF;
+
+            font-size: 13px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =====================================================
+           SERVICES INTRO
+        ====================================================== */
+
+        .services-section {
+
+            padding: 65px 0 75px;
+
+            background: var(--light);
+        }
+
+
+        .section-heading {
+
+            margin-bottom: 35px;
+        }
+
+
+        .section-label {
+
+            color: #A57800;
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            letter-spacing: 1.7px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 8px;
+        }
+
+
+        .section-heading h2 {
+
+            color: var(--navy);
+
+            font-size: 30px;
+
+            line-height: 1.2;
+
+            letter-spacing: -0.8px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .section-heading p {
+
+            color: var(--gray);
+
+            max-width: 650px;
+
+            font-size: 13px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =====================================================
+           SERVICE LIST
+        ====================================================== */
+
+        .service-list {
+
+            display: grid;
+
+            grid-template-columns: 1fr;
+
+            gap: 14px;
+        }
+
+
+        .service-card {
+
+            position: relative;
+
+            display: flex;
+
+            flex-direction: column;
+
+            background: var(--white);
+
+            border:
+                1px solid var(--border);
+
+            border-radius: var(--radius);
+
+            padding: 24px 22px 22px;
+
+            overflow: hidden;
+
+            transition:
+                transform var(--transition),
+                box-shadow var(--transition),
+                border-color var(--transition);
+        }
+
+
+        .service-card:hover {
+
+            transform: translateY(-4px);
+
+            border-color: #D0D5DD;
+
+            box-shadow:
+                0 15px 35px rgba(11,18,32,0.08);
+        }
+
+
+        .service-card::before {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            top: 0;
+
+            width: 4px;
+            height: 100%;
+
+            background: var(--yellow);
+
+            transform: scaleY(0);
+
+            transform-origin: top;
+
+            transition: var(--transition);
+        }
+
+
+        .service-card:hover::before {
+
+            transform: scaleY(1);
+        }
+
+
+        .service-top {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: flex-start;
+
+            gap: 15px;
+
+            margin-bottom: 18px;
+        }
+
+
+        .service-number {
+
+            color: #98A2B3;
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
+        }
+
+
+        .service-icon {
+
+            width: 48px;
+
+            height: 48px;
+
+            flex-shrink: 0;
+
+            display: grid;
+
+            place-items: center;
+
+            background: var(--navy);
+
+            border-radius: 10px;
+
+            color: var(--yellow);
+
+            font-size: 22px;
+        }
+
+
+        .service-card h2 {
+
+            color: var(--navy);
+
+            font-size: 21px;
+
+            line-height: 1.25;
+
+            margin-bottom: 9px;
+        }
+
+
+        .service-card > p {
+
+            color: var(--gray);
+
+            font-size: 12px;
+
+            line-height: 1.75;
+
+            margin-bottom: 17px;
+        }
+
+
+        .service-features {
+
+            list-style: none;
+
+            margin-bottom: 22px;
+        }
+
+
+        .service-features li {
+
+            position: relative;
+
+            padding-left: 17px;
+
+            margin-bottom: 6px;
+
+            color: #475467;
+
+            font-size: 11px;
+
+            line-height: 1.5;
+        }
+
+
+        .service-features li::before {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+
+            top: 7px;
+
+            width: 6px;
+
+            height: 6px;
+
+            border-radius: 50%;
+
+            background: var(--yellow);
+        }
+
+
+        .service-bottom {
+
+            margin-top: auto;
+
+            padding-top: 15px;
+
+            border-top:
+                1px solid var(--border);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 10px;
+        }
+
+
+        .service-type {
+
+            color: #98A2B3;
+
+            font-size: 9px;
+
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.7px;
+        }
+
+
+        .service-link {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 6px;
+
+            color: var(--navy);
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            transition: var(--transition);
+        }
+
+
+        .service-link span {
+
+            color: var(--yellow);
+
+            font-size: 15px;
+
+            line-height: 1;
+        }
+
+
+        .service-link:hover {
+
+            color: #9B7100;
+        }
+
+
+        /* =====================================================
+           SERVICE NOTE
+        ====================================================== */
+
+        .service-note {
+
+            margin-top: 35px;
+
+            padding: 20px;
+
+            border-radius: 10px;
+
+            background: var(--dark-navy);
+
+            color: var(--white);
+        }
+
+
+        .service-note strong {
+
+            display: block;
+
+            color: var(--yellow);
+
+            font-size: 13px;
+
+            margin-bottom: 5px;
+        }
+
+
+        .service-note p {
+
+            color: #B7C1CF;
+
+            font-size: 11px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           CTA
+        ====================================================== */
+
+        .cta {
+
+            padding: 60px 0;
+
+            background: var(--navy);
+
+            color: var(--white);
+        }
+
+
+        .cta-inner {
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: flex-start;
+
+            gap: 22px;
+        }
+
+
+        .cta-label {
+
+            color: var(--yellow);
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            letter-spacing: 1.5px;
+
+            margin-bottom: 8px;
+        }
+
+
+        .cta h2 {
+
+            font-size: 28px;
+
+            line-height: 1.2;
+
+            margin-bottom: 8px;
+        }
+
+
+        .cta p {
+
+            color: #AAB6C6;
+
+            max-width: 600px;
+
+            font-size: 12px;
+
+            line-height: 1.7;
+        }
+
+
+        .cta-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-height: 48px;
+
+            padding: 0 22px;
+
+            background: var(--yellow);
+
+            color: var(--navy);
+
+            border-radius: 7px;
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            white-space: nowrap;
+
+            transition: var(--transition);
+        }
+
+
+        .cta-button:hover {
+
+            background: #DCA200;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ====================================================== */
+
+        footer {
+
+            background: #070D17;
+
+            color: var(--white);
+
+            padding-top: 50px;
+        }
+
+
+        .footer-grid {
+
+            display: grid;
+
+            grid-template-columns: 1fr;
+
+            gap: 32px;
+
+            padding-bottom: 35px;
+        }
+
+
+        .footer-description {
+
+            max-width: 310px;
+
+            margin-top: 14px;
+
+            color: #8290A2;
+
+            font-size: 11px;
+
+            line-height: 1.8;
+        }
+
+
+        .footer-title {
+
+            color: var(--white);
+
+            font-size: 12px;
+
+            margin-bottom: 14px;
+        }
+
+
+        .footer-links a {
+
+            display: block;
+
+            color: #8290A2;
+
+            font-size: 11px;
+
+            margin-bottom: 8px;
+
+            transition: var(--transition);
+        }
+
+
+        .footer-links a:hover {
+
+            color: var(--yellow);
+        }
+
+
+        .footer-contact p {
+
+            color: #8290A2;
+
+            font-size: 11px;
+
+            line-height: 1.7;
+
+            margin-bottom: 9px;
+        }
+
+
+        .footer-contact strong {
+
+            color: var(--yellow);
+        }
+
+
+        .footer-bottom {
+
+            padding: 18px 0;
+
+            border-top:
+                1px solid rgba(255,255,255,0.07);
+
+            color: #647184;
+
+            font-size: 9px;
+
+            text-align: center;
+        }
+
+
+        /* =====================================================
+           FLOATING WHATSAPP
+        ====================================================== */
+
+        .whatsapp {
+
+            position: fixed;
+
+            right: 16px;
+
+            bottom: 16px;
+
+            z-index: 900;
+
+            width: 54px;
+
+            height: 54px;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 50%;
+
+            background: var(--green);
+
+            color: var(--white);
+
+            font-size: 22px;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,0.22);
+
+            transition: var(--transition);
+        }
+
+
+        .whatsapp:hover {
+
+            transform: scale(1.08);
+        }
+
+
+        /* =====================================================
+           SCROLL REVEAL
+        ====================================================== */
+
+        .reveal {
+
+            opacity: 0;
+
+            transform: translateY(20px);
+
+            transition:
+                opacity 0.6s ease,
+                transform 0.6s ease;
+        }
+
+
+        .reveal.show {
+
+            opacity: 1;
+
+            transform: translateY(0);
+        }
+
+
+        /* =====================================================
+           TABLET
+        ====================================================== */
+
+        @media (min-width: 600px) {
+
+            .container {
+
+                width: calc(100% - 50px);
+            }
+
+
+            .page-header-inner {
+
+                min-height: 400px;
+            }
+
+
+            .service-list {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .footer-grid {
+
+                grid-template-columns:
+                    1.5fr 1fr 1fr;
+            }
+        }
+
+
+        /* =====================================================
+           LAPTOP
+        ====================================================== */
+
+        @media (min-width: 900px) {
+
+            .container {
+
+                width: calc(100% - 70px);
+            }
+
+
+            .menu-button {
+
+                display: none;
+            }
+
+
+            .nav-links {
+
+                display: flex;
+            }
+
+
+            .nav-whatsapp {
+
+                display: inline-flex;
+            }
+
+
+            .mobile-menu {
+
+                display: none !important;
+            }
+
+
+            .page-header-inner {
+
+                min-height: 450px;
+
+                text-align: left;
+
+                justify-content: flex-start;
+            }
+
+
+            .breadcrumb {
+
+                justify-content: flex-start;
+            }
+
+
+            .page-header h1 {
+
+                font-size: 58px;
+            }
+
+
+            .page-header-description {
+
+                margin: 0;
+
+                font-size: 14px;
+            }
+
+
+            .services-section {
+
+                padding: 85px 0 95px;
+            }
+
+
+            .section-heading h2 {
+
+                font-size: 38px;
+            }
+
+
+            .service-list {
+
+                grid-template-columns:
+                    repeat(3, 1fr);
+            }
+
+
+            .cta-inner {
+
+                flex-direction: row;
+
+                align-items: center;
+
+                justify-content: space-between;
+            }
+
+
+            .footer-grid {
+
+                grid-template-columns:
+                    1.5fr 1fr 1fr 1fr;
+            }
+
+
+            .footer-bottom {
+
+                text-align: left;
+            }
+        }
+
+
+        /* =====================================================
+           LARGE DESKTOP
+        ====================================================== */
+
+        @media (min-width: 1200px) {
+
+            .container {
+
+                width:
+                    min(1180px, calc(100% - 80px));
+            }
+
+
+            .page-header h1 {
+
+                font-size: 68px;
+            }
+
+
+            .service-card {
+
+                padding: 28px 25px 24px;
+            }
+        }
+
+
+        /* =====================================================
+           SMALL MOBILE
+        ====================================================== */
+
+        @media (max-width: 380px) {
+
+            .container {
+
+                width: calc(100% - 26px);
+            }
+
+
+            .brand-name {
+
+                font-size: 14px;
+            }
+
+
+            .brand-logo {
+
+                width: 43px;
+
+                height: 43px;
+            }
+
+
+            .page-header h1 {
+
+                font-size: 37px;
+            }
+
+
+            .service-card {
+
+                padding: 21px 19px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header id="header">
+
+        <div class="container">
+
+            <nav class="navbar">
+
+
+                <!-- LOGO -->
+
+                <a href="index.html"
+                   class="brand">
+
+                    <!-- CHANGE logo.jpeg IF YOUR LOGO FILE HAS ANOTHER NAME -->
+
+                    <img src="logo.jpeg"
+                         alt="Marqen Solutions Logo"
+                         class="brand-logo">
+
+                    <div class="brand-name">
+
+                        MARQEN
+
+                        <span>
+                            SOLUTIONS
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+                <!-- DESKTOP NAV -->
+
+                <div class="nav-links">
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="services.html"
+                       class="active">
+                        Services
+                    </a>
+
+                    <a href="index.html#industries">
+                        Industries
+                    </a>
+
+                    <a href="index.html#projects">
+                        Projects
+                    </a>
+
+                    <a href="index.html#about">
+                        About
+                    </a>
+
+                    <a href="index.html#contact">
+                        Contact
+                    </a>
+
+                </div>
+
+
+                <!-- NAV ACTION -->
+
+                <div>
+
+                    <a href="https://wa.me/966579547328"
+                       target="_blank"
+                       class="nav-whatsapp">
+
+                        WhatsApp
+
+                    </a>
+
+
+                    <button class="menu-button"
+                            id="menuButton"
+                            aria-label="Open navigation menu">
+
+                        ☰
+
+                    </button>
+
+                </div>
+
+            </nav>
+
+
+            <!-- MOBILE MENU -->
+
+            <div class="mobile-menu"
+                 id="mobileMenu">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="services.html">
+                    Services
+                </a>
+
+                <a href="index.html#industries">
+                    Industries
+                </a>
+
+                <a href="index.html#projects">
+                    Projects
+                </a>
+
+                <a href="index.html#about">
+                    About
+                </a>
+
+                <a href="index.html#contact">
+                    Contact
+                </a>
+
+                <a href="https://wa.me/966579547328"
+                   target="_blank"
+                   class="mobile-whatsapp">
+
+                    WhatsApp Us
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         PAGE HEADER
+    ====================================================== -->
+
+    <main>
+
+        <section class="page-header">
+
+            <div class="container">
+
+                <div class="page-header-inner">
+
+
+                    <div>
+
+
+                        <!-- BREADCRUMB -->
+
+                        <div class="breadcrumb">
+
+                            <a href="index.html">
+                                Home
+                            </a>
+
+                            <span>
+                                /
+                            </span>
+
+                            <span>
+                                Services
+                            </span>
+
+                        </div>
+
+
+                        <!-- LABEL -->
+
+                        <div class="page-label">
+
+                            MARQEN SOLUTIONS
+
+                        </div>
+
+
+                        <!-- TITLE -->
+
+                        <h1>
+
+                            Our
+                            <span>Services</span>
+
+                        </h1>
+
+
+                        <!-- DESCRIPTION -->
+
+                        <p class="page-header-description">
+
+                            Explore our technical services for
+                            installation, repair, maintenance
+                            and business setup.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             SERVICES
+        ====================================================== -->
+
+        <section class="services-section"
+                 id="all-services">
+
+            <div class="container">
+
+
+                <!-- SECTION INTRO -->
+
+                <div class="section-heading reveal">
+
+                    <div class="section-label">
+                        WHAT WE DO
+                    </div>
+
+                    <h2>
+                        Technical Services
+                    </h2>
+
+                    <p>
+
+                        From specialized laundry equipment
+                        support to electrical, security and
+                        maintenance solutions, choose a service
+                        below to learn more.
+
+                    </p>
+
+                </div>
+
+
+                <!-- =================================================
+                     SERVICE CARDS
+                ================================================== -->
+
+                <div class="service-list">
+
+
+                    <!-- SERVICE 01 -->
+
+                    <article class="service-card reveal">
+
+
+                        <div class="service-top">
+
+                            <div class="service-number">
+                                01
+                            </div>
+
+                            <div class="service-icon">
+                                ⚙
+                            </div>
+
+                        </div>
+
+
+                        <h2>
+                            Laundry Equipment
+                        </h2>
+
+
+                        <p>
+
+                            Installation, repair and maintenance
+                            for commercial laundry equipment.
+
+                        </p>
+
+
+                        <ul class="service-features">
+
+                            <li>
+                                Equipment Installation
+                            </li>
+
+                            <li>
+                                Equipment Repair
+                            </li>
+
+                            <li>
+                                Preventive Maintenance
+                            </li>
+
+                            <li>
+                                Technical Troubleshooting
+                            </li>
+
+                        </ul>
+
+
+                        <div class="service-bottom">
+
+                            <span class="service-type">
+                                Commercial
+                            </span>
+
+
+                            <a href="laundry-equipment.html"
+                               class="service-link">
+
+                                View Service
+
+                                <span>
+                                    →
+                                </span>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- SERVICE 02 -->
+
+                    <article class="service-card reveal">
+
+
+                        <div class="service-top">
+
+                            <div class="service-number">
+                                02
+                            </div>
+
+                            <div class="service-icon">
+                                ⚡
+                            </div>
+
+                        </div>
+
+
+                        <h2>
+                            Electrical Services
+                        </h2>
+
+
+                        <p>
+
+                            Electrical installation,
+                            troubleshooting and maintenance
+                            for business environments.
+
+                        </p>
+
+
+                        <ul class="service-features">
+
+                            <li>
+                                Electrical Installation
+                            </li>
+
+                            <li>
+                                Fault Troubleshooting
+                            </li>
+
+                            <li>
+                                Electrical Maintenance
+                            </li>
+
+                            <li>
+                                Technical Support
+                            </li>
+
+                        </ul>
+
+
+                        <div class="service-bottom">
+
+                            <span class="service-type">
+                                Electrical
+                            </span>
+
+
+                            <a href="electrical-services.html"
+                               class="service-link">
+
+                                View Service
+
+                                <span>
+                                    →
+                                </span>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- SERVICE 03 -->
+
+                    <article class="service-card reveal">
+
+
+                        <div class="service-top">
+
+                            <div class="service-number">
+                                03
+                            </div>
+
+                            <div class="service-icon">
+                                ◉
+                            </div>
+
+                        </div>
+
+
+                        <h2>
+                            CCTV & Security
+                        </h2>
+
+
+                        <p>
+
+                            CCTV and security system solutions
+                            for commercial and business spaces.
+
+                        </p>
+
+
+                        <ul class="service-features">
+
+                            <li>
+                                CCTV Installation
+                            </li>
+
+                            <li>
+                                Camera Setup
+                            </li>
+
+                            <li>
+                                System Configuration
+                            </li>
+
+                            <li>
+                                Maintenance & Support
+                            </li>
+
+                        </ul>
+
+
+                        <div class="service-bottom">
+
+                            <span class="service-type">
+                                Security
+                            </span>
+
+
+                            <a href="cctv-security.html"
+                               class="service-link">
+
+                                View Service
+
+                                <span>
+                                    →
+                                </span>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- SERVICE 04 -->
+
+                    <article class="service-card reveal">
+
+
+                        <div class="service-top">
+
+                            <div class="service-number">
+                                04
+                            </div>
+
+                            <div class="service-icon">
+                                🔥
+                            </div>
+
+                        </div>
+
+
+                        <h2>
+                            Fire Alarm
+                        </h2>
+
+
+                        <p>
+
+                            Fire alarm installation, testing
+                            and maintenance for business
+                            environments.
+
+                        </p>
+
+
+                        <ul class="service-features">
+
+                            <li>
+                                Fire Alarm Installation
+                            </li>
+
+                            <li>
+                                System Testing
+                            </li>
+
+                            <li>
+                                Maintenance
+                            </li>
+
+                            <li>
+                                Technical Support
+                            </li>
+
+                        </ul>
+
+
+                        <div class="service-bottom">
+
+                            <span class="service-type">
+                                Safety
+                            </span>
+
+
+                            <a href="fire-alarm.html"
+                               class="service-link">
+
+                                View Service
+
+                                <span>
+                                    →
+                                </span>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- SERVICE 05 -->
+
+                    <article class="service-card reveal">
+
+
+                        <div class="service-top">
+
+                            <div class="service-number">
+                                05
+                            </div>
+
+                            <div class="service-icon">
+                                ▣
+                            </div>
+
+                        </div>
+
+
+                        <h2>
+                            Shop Setup
+                        </h2>
+
+
+                        <p>
+
+                            Technical setup services for new
+                            and existing commercial shops.
+
+                        </p>
+
+
+                        <ul class="service-features">
+
+                            <li>
+                                Technical Shop Setup
+                            </li>
+
+                            <li>
+                                Electrical Setup
+                            </li>
+
+                            <li>
+                                Equipment Installation
+                            </li>
+
+                            <li>
+                                System Coordination
+                            </li>
+
+                        </ul>
+
+
+                        <div class="service-bottom">
+
+                            <span class="service-type">
+                                Business
+                            </span>
+
+
+                            <a href="shop-setup.html"
+                               class="service-link">
+
+                                View Service
+
+                                <span>
+                                    →
+                                </span>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- SERVICE 06 -->
+
+                    <article class="service-card reveal">
+
+
+                        <div class="service-top">
+
+                            <div class="service-number">
+                                06
+                            </div>
+
+                            <div class="service-icon">
+                                🔧
+                            </div>
+
+                        </div>
+
+
+                        <h2>
+                            Maintenance
+                        </h2>
+
+
+                        <p>
+
+                            Preventive and corrective
+                            maintenance to help reduce
+                            business downtime.
+
+                        </p>
+
+
+                        <ul class="service-features">
+
+                            <li>
+                                Preventive Maintenance
+                            </li>
+
+                            <li>
+                                Corrective Maintenance
+                            </li>
+
+                            <li>
+                                Equipment Inspection
+                            </li>
+
+                            <li>
+                                Troubleshooting
+                            </li>
+
+                        </ul>
+
+
+                        <div class="service-bottom">
+
+                            <span class="service-type">
+                                Maintenance
+                            </span>
+
+
+                            <a href="maintenance.html"
+                               class="service-link">
+
+                                View Service
+
+                                <span>
+                                    →
+                                </span>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+
+                <!-- SERVICE NOTE -->
+
+                <div class="service-note reveal">
+
+                    <strong>
+                        Need something specific?
+                    </strong>
+
+                    <p>
+
+                        If you don't see exactly what you need,
+                        contact Marqen Solutions. We can discuss
+                        your technical requirement and determine
+                        the right solution for your business.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             CTA
+        ====================================================== -->
+
+        <section class="cta">
+
+            <div class="container">
+
+                <div class="cta-inner">
+
+
+                    <div>
+
+                        <div class="cta-label">
+                            NEED TECHNICAL SUPPORT?
+                        </div>
+
+
+                        <h2>
+                            Let's Discuss Your Requirement.
+                        </h2>
+
+
+                        <p>
+
+                            Contact Marqen Solutions directly
+                            through WhatsApp to discuss your
+                            service requirement.
+
+                        </p>
+
+                    </div>
+
+
+                    <a href="https://wa.me/966579547328?text=Hello%20Marqen%20Solutions%2C%20I%20would%20like%20to%20discuss%20a%20service."
+                       target="_blank"
+                       class="cta-button">
+
+                        WhatsApp Us
+                        ↗
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+
+                <!-- BRAND -->
+
+                <div>
+
+                    <a href="index.html"
+                       class="brand">
+
+                        <img src="logo.jpeg"
+                             alt="Marqen Solutions Logo"
+                             class="brand-logo">
+
+                        <div class="brand-name">
+
+                            MARQEN
+
+                            <span>
+                                SOLUTIONS
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+                    <p class="footer-description">
+
+                        Technical installation,
+                        maintenance and business
+                        support services in Saudi Arabia.
+
+                    </p>
+
+                </div>
+
+
+                <!-- QUICK LINKS -->
+
+                <div class="footer-links">
+
+                    <h3 class="footer-title">
+                        Quick Links
+                    </h3>
+
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+
+                    <a href="services.html">
+                        Services
+                    </a>
+
+
+                    <a href="index.html#about">
+                        About
+                    </a>
+
+
+                    <a href="index.html#contact">
+                        Contact
+                    </a>
+
+                </div>
+
+
+                <!-- SERVICES -->
+
+                <div class="footer-links">
+
+                    <h3 class="footer-title">
+                        Services
+                    </h3>
+
+
+                    <a href="laundry-equipment.html">
+                        Laundry Equipment
+                    </a>
+
+
+                    <a href="electrical-services.html">
+                        Electrical Services
+                    </a>
+
+
+                    <a href="cctv-security.html">
+                        CCTV & Security
+                    </a>
+
+
+                    <a href="fire-alarm.html">
+                        Fire Alarm
+                    </a>
+
+
+                    <a href="shop-setup.html">
+                        Shop Setup
+                    </a>
+
+
+                    <a href="maintenance.html">
+                        Maintenance
+                    </a>
+
+                </div>
+
+
+                <!-- CONTACT -->
+
+                <div class="footer-contact">
+
+                    <h3 class="footer-title">
+                        Contact
+                    </h3>
+
+
+                    <p>
+
+                        <strong>
+                            Location
+                        </strong>
+
+                        <br>
+
+                        Saudi Arabia
+
+                    </p>
+
+
+                    <p>
+
+                        <strong>
+                            Phone
+                        </strong>
+
+                        <br>
+
+                        <a href="tel:+966579547328">
+
+                            057 954 7328
+
+                        </a>
+
+                    </p>
+
+
+                    <p>
+
+                        <strong>
+                            WhatsApp
+                        </strong>
+
+                        <br>
+
+                        <a href="https://wa.me/966579547328"
+                           target="_blank">
+
+                            Chat with us
+
+                        </a>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- COPYRIGHT -->
+
+            <div class="footer-bottom">
+
+                © <span id="year"></span>
+                Marqen Solutions.
+                All Rights Reserved.
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         FLOATING WHATSAPP
+    ====================================================== -->
+
+    <a href="https://wa.me/966579547328?text=Hello%20Marqen%20Solutions%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services."
+       target="_blank"
+       class="whatsapp"
+       aria-label="Contact Marqen Solutions on WhatsApp">
+
+        ☎
+
+    </a>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+        /* =====================================================
+           MOBILE MENU
+        ====================================================== */
+
+        const menuButton =
+            document.getElementById("menuButton");
+
+        const mobileMenu =
+            document.getElementById("mobileMenu");
+
+
+        menuButton.addEventListener("click", function () {
+
+            mobileMenu.classList.toggle("active");
+
+
+            if (mobileMenu.classList.contains("active")) {
+
+                menuButton.textContent = "✕";
+
+                menuButton.setAttribute(
+                    "aria-label",
+                    "Close navigation menu"
+                );
+
+            } else {
+
+                menuButton.textContent = "☰";
+
+                menuButton.setAttribute(
+                    "aria-label",
+                    "Open navigation menu"
+                );
+
+            }
+
+        });
+
+
+        /* =====================================================
+           CLOSE MOBILE MENU AFTER CLICK
+        ====================================================== */
+
+        const mobileLinks =
+            mobileMenu.querySelectorAll("a");
+
+
+        mobileLinks.forEach(function(link) {
+
+            link.addEventListener("click", function() {
+
+                mobileMenu.classList.remove("active");
+
+                menuButton.textContent = "☰";
+
+                menuButton.setAttribute(
+                    "aria-label",
+                    "Open navigation menu"
+                );
+
+            });
+
+        });
+
+
+        /* =====================================================
+           HEADER SCROLL EFFECT
+        ====================================================== */
+
+        const header =
+            document.getElementById("header");
+
+
+        window.addEventListener("scroll", function() {
+
+            if (window.scrollY > 30) {
+
+                header.classList.add("scrolled");
+
+            } else {
+
+                header.classList.remove("scrolled");
+
+            }
+
+        });
+
+
+        /* =====================================================
+           SCROLL REVEAL
+        ====================================================== */
+
+        const revealElements =
+            document.querySelectorAll(".reveal");
+
+
+        const observer =
+            new IntersectionObserver(
+
+                function(entries, observer) {
+
+                    entries.forEach(function(entry) {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target.classList.add("show");
+
+                            observer.unobserve(entry.target);
+
+                        }
+
+                    });
+
+                },
+
+                {
+                    threshold: 0.10
+                }
+
+            );
+
+
+        revealElements.forEach(function(element) {
+
+            observer.observe(element);
+
+        });
+
+
+        /* =====================================================
+           CURRENT YEAR
+        ====================================================== */
+
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+    </script>
+
+
+</body>
+
+</html>

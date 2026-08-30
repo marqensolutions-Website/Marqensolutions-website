@@ -1,45 +1,2803 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Marqen Solutions</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/png" href="favicon.Marqen.io.png"> 
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Marqen Solutions | Installation, Maintenance & Technical Services</title>
+
+    <meta name="description"
+          content="Marqen Solutions provides professional installation, maintenance and technical services including laundry equipment, electrical services, CCTV, fire alarm systems, shop setup and maintenance across Saudi Arabia.">
+
+    <meta name="keywords"
+          content="Marqen Solutions, laundry equipment Saudi Arabia, electrical services, CCTV installation, fire alarm, shop setup, maintenance, technical services">
+
+    <meta name="author"
+          content="Marqen Solutions">
+
+    <meta name="robots"
+          content="index, follow">
+
+    <link rel="icon"
+          type="image/x-icon"
+          href="favicon.ico">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+
+<style>
+
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+:root {
+
+    --navy: #0B1220;
+    --dark-navy: #162033;
+    --yellow: #F5B400;
+    --white: #FFFFFF;
+
+    --light: #F5F7FA;
+    --text: #1D2939;
+    --gray: #667085;
+    --border: #E4E7EC;
+
+    --green: #25D366;
+
+    --container: 1180px;
+
+    --radius: 14px;
+
+    --transition: 0.3s ease;
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family: "Manrope", sans-serif;
+
+    background: var(--white);
+
+    color: var(--text);
+
+    line-height: 1.6;
+
+    overflow-x: hidden;
+
+}
+
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+button {
+    font-family: inherit;
+}
+
+
+.container {
+
+    width: calc(100% - 32px);
+
+    max-width: var(--container);
+
+    margin: auto;
+
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    background: rgba(11,18,32,0.97);
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.08);
+
+    transition: var(--transition);
+
+}
+
+
+header.scrolled {
+
+    box-shadow:
+        0 8px 30px rgba(0,0,0,0.2);
+
+}
+
+
+.navbar {
+
+    min-height: 72px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+/* =====================================================
+   BRAND
+===================================================== */
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.brand-logo {
+
+    width: 46px;
+
+    height: 46px;
+
+    object-fit: contain;
+
+    border-radius: 8px;
+
+    background: var(--white);
+
+}
+
+
+.brand-name {
+
+    color: var(--white);
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+
+}
+
+
+.brand-name span {
+
+    display: block;
+
+    color: var(--yellow);
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    line-height: 1;
+
+    margin-top: 3px;
+
+}
+
+
+/* =====================================================
+   DESKTOP NAV
+===================================================== */
+
+.nav-links {
+
+    display: none;
+
+    align-items: center;
+
+    gap: 26px;
+
+}
+
+
+.nav-links a {
+
+    color: #D0D5DD;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    transition: var(--transition);
+
+}
+
+
+.nav-links a:hover {
+
+    color: var(--yellow);
+
+}
+
+
+.nav-whatsapp {
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 40px;
+
+    padding: 0 15px;
+
+    border-radius: 6px;
+
+    background: var(--yellow);
+
+    color: var(--navy);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+}
+
+
+.nav-whatsapp:hover {
+
+    background: #DCA200;
+
+}
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+.menu-button {
+
+    width: 42px;
+
+    height: 42px;
+
+    display: grid;
+
+    place-items: center;
+
+    border:
+        1px solid rgba(255,255,255,0.18);
+
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: var(--white);
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+}
+
+
+.mobile-menu {
+
+    display: none;
+
+    padding: 18px 0 25px;
+
+    border-top:
+        1px solid rgba(255,255,255,0.07);
+
+}
+
+
+.mobile-menu.active {
+
+    display: block;
+
+}
+
+
+.mobile-menu a {
+
+    display: block;
+
+    padding: 12px 0;
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.06);
+
+    color: var(--white);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+
+.mobile-menu a:hover {
+
+    color: var(--yellow);
+
+}
+
+
+.mobile-whatsapp {
+
+    margin-top: 18px !important;
+
+    padding: 13px !important;
+
+    text-align: center;
+
+    border: none !important;
+
+    border-radius: 7px;
+
+    background: var(--yellow);
+
+    color: var(--navy) !important;
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+    min-height: 100vh;
+
+    padding-top: 72px;
+
+    display: flex;
+
+    align-items: center;
+
+    background: var(--navy);
+
+    color: var(--white);
+
+}
+
+
+.hero-content {
+
+    padding: 65px 0 75px;
+
+}
+
+
+.hero-label {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 18px;
+
+    color: var(--yellow);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.8px;
+
+    text-transform: uppercase;
+
+}
+
+
+.hero-label::before {
+
+    content: "";
+
+    width: 25px;
+
+    height: 2px;
+
+    background: var(--yellow);
+
+}
+
+
+.hero h1 {
+
+    max-width: 850px;
+
+    font-size: 43px;
+
+    line-height: 1.08;
+
+    letter-spacing: -1.5px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.hero h1 span {
+
+    color: var(--yellow);
+
+}
+
+
+.hero-text {
+
+    max-width: 650px;
+
+    color: #B7C1CF;
+
+    font-size: 13px;
+
+    line-height: 1.85;
+
+    margin-bottom: 28px;
+
+}
+
+
+.hero-buttons {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+}
+
+
+.btn {
+
+    min-height: 48px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 0 21px;
+
+    border-radius: 7px;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    transition: var(--transition);
+
+}
+
+
+.btn-primary {
+
+    background: var(--yellow);
+
+    color: var(--navy);
+
+}
+
+
+.btn-primary:hover {
+
+    background: #DCA200;
+
+    transform: translateY(-2px);
+
+}
+
+
+.btn-secondary {
+
+    border:
+        1px solid rgba(255,255,255,0.25);
+
+    color: var(--white);
+
+}
+
+
+.btn-secondary:hover {
+
+    border-color: var(--yellow);
+
+    color: var(--yellow);
+
+}
+
+
+/* =====================================================
+   HERO STATS
+===================================================== */
+
+.hero-stats {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 8px;
+
+    max-width: 650px;
+
+    margin-top: 45px;
+
+    padding-top: 25px;
+
+    border-top:
+        1px solid rgba(255,255,255,0.1);
+
+}
+
+
+.stat strong {
+
+    display: block;
+
+    color: var(--yellow);
+
+    font-size: 21px;
+
+    line-height: 1;
+
+    margin-bottom: 5px;
+
+}
+
+
+.stat span {
+
+    color: #98A2B3;
+
+    font-size: 9px;
+
+}
+
+
+/* =====================================================
+   SERVICES
+===================================================== */
+
+.services {
+
+    padding: 75px 0;
+
+    background: var(--light);
+
+}
+
+
+.section-heading {
+
+    max-width: 700px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.section-label {
+
+    color: #A57800;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.7px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 9px;
+
+}
+
+
+.section-title {
+
+    color: var(--navy);
+
+    font-size: 30px;
+
+    line-height: 1.2;
+
+    letter-spacing: -0.8px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.section-text {
+
+    color: var(--gray);
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+}
+
+
+.services-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 13px;
+
+}
+
+
+.service-card {
+
+    padding: 24px;
+
+    background: var(--white);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    transition: var(--transition);
+
+}
+
+
+.service-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color: var(--yellow);
+
+    box-shadow:
+        0 15px 35px rgba(11,18,32,0.08);
+
+}
+
+
+.service-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    display: grid;
+
+    place-items: center;
+
+    margin-bottom: 17px;
+
+    border-radius: 9px;
+
+    background: var(--navy);
+
+    color: var(--yellow);
+
+    font-size: 20px;
+
+}
+
+
+.service-card h3 {
+
+    color: var(--navy);
+
+    font-size: 16px;
+
+    margin-bottom: 7px;
+
+}
+
+
+.service-card p {
+
+    color: var(--gray);
+
+    font-size: 10px;
+
+    line-height: 1.7;
+
+    margin-bottom: 15px;
+
+}
+
+
+.service-link {
+
+    color: var(--navy);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+}
+
+
+.service-link span {
+
+    color: var(--yellow);
+
+}
+
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.about {
+
+    padding: 75px 0;
+
+    background: var(--white);
+
+}
+
+
+.about-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+}
+
+
+.about-box {
+
+    padding: 25px;
+
+    background: var(--light);
+
+    border-left:
+        4px solid var(--yellow);
+
+    border-radius: 10px;
+
+}
+
+
+.about-box strong {
+
+    display: block;
+
+    color: var(--navy);
+
+    font-size: 14px;
+
+    margin-bottom: 7px;
+
+}
+
+
+.about-box p {
+
+    color: var(--gray);
+
+    font-size: 11px;
+
+    line-height: 1.75;
+
+}
+
+
+/* =====================================================
+   WHY CHOOSE US
+===================================================== */
+
+.why {
+
+    padding: 75px 0;
+
+    background: var(--dark-navy);
+
+}
+
+
+.why .section-title {
+
+    color: var(--white);
+
+}
+
+
+.why .section-label {
+
+    color: var(--yellow);
+
+}
+
+
+.why .section-text {
+
+    color: #AAB6C6;
+
+}
+
+
+.why-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 13px;
+
+    margin-top: 35px;
+
+}
+
+
+.why-card {
+
+    padding: 23px;
+
+    border:
+        1px solid rgba(255,255,255,0.08);
+
+    border-radius: 11px;
+
+    background: rgba(255,255,255,0.03);
+
+}
+
+
+.why-icon {
+
+    width: 42px;
+
+    height: 42px;
+
+    display: grid;
+
+    place-items: center;
+
+    margin-bottom: 14px;
+
+    border-radius: 8px;
+
+    background: var(--yellow);
+
+    color: var(--navy);
+
+    font-weight: 900;
+
+}
+
+
+.why-card h3 {
+
+    color: var(--white);
+
+    font-size: 14px;
+
+    margin-bottom: 6px;
+
+}
+
+
+.why-card p {
+
+    color: #98A2B3;
+
+    font-size: 10px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =====================================================
+   PROJECTS
+===================================================== */
+
+.projects {
+
+    padding: 75px 0;
+
+    background: var(--white);
+
+}
+
+
+.projects-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+
+}
+
+
+.project-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 280px;
+
+    padding: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    border-radius: var(--radius);
+
+    background: var(--navy);
+
+    border:
+        1px solid rgba(11,18,32,0.1);
+
+}
+
+
+.project-number {
+
+    position: absolute;
+
+    top: 20px;
+
+    right: 20px;
+
+    color: rgba(255,255,255,0.25);
+
+    font-size: 28px;
+
+    font-weight: 800;
+
+}
+
+
+.project-category {
+
+    color: var(--yellow);
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.4px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 9px;
+
+}
+
+
+.project-card h3 {
+
+    color: var(--white);
+
+    font-size: 18px;
+
+    line-height: 1.3;
+
+    margin-bottom: 9px;
+
+}
+
+
+.project-card p {
+
+    max-width: 390px;
+
+    color: #AAB6C6;
+
+    font-size: 10px;
+
+    line-height: 1.7;
+
+    margin-bottom: 15px;
+
+}
+
+
+.project-link {
+
+    color: var(--yellow);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+}
+
+
+/* =====================================================
+   CONTACT CTA
+===================================================== */
+
+.cta {
+
+    padding: 60px 0;
+
+    background: var(--yellow);
+
+}
+
+
+.cta-inner {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+}
+
+
+.cta h2 {
+
+    max-width: 700px;
+
+    color: var(--navy);
+
+    font-size: 28px;
+
+    line-height: 1.2;
+
+    margin-bottom: 9px;
+
+}
+
+
+.cta p {
+
+    max-width: 650px;
+
+    color: #4A3A00;
+
+    font-size: 11px;
+
+    line-height: 1.75;
+
+}
+
+
+.cta-button {
+
+    align-self: flex-start;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 48px;
+
+    padding: 0 22px;
+
+    border-radius: 7px;
+
+    background: var(--navy);
+
+    color: var(--white);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    transition: var(--transition);
+
+}
+
+
+.cta-button:hover {
+
+    background: var(--dark-navy);
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    padding-top: 50px;
+
+    background: #070D17;
+
+    color: var(--white);
+
+}
+
+
+.footer-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+
+    padding-bottom: 35px;
+
+}
+
+
+.footer-description {
+
+    max-width: 310px;
+
+    margin-top: 14px;
+
+    color: #8290A2;
+
+    font-size: 10px;
+
+    line-height: 1.8;
+
+}
+
+
+.footer-title {
+
+    color: var(--white);
+
+    font-size: 12px;
+
+    margin-bottom: 14px;
+
+}
+
+
+.footer-links a {
+
+    display: block;
+
+    color: #8290A2;
+
+    font-size: 10px;
+
+    margin-bottom: 8px;
+
+    transition: var(--transition);
+
+}
+
+
+.footer-links a:hover {
+
+    color: var(--yellow);
+
+}
+
+
+.footer-contact p {
+
+    color: #8290A2;
+
+    font-size: 10px;
+
+    line-height: 1.7;
+
+    margin-bottom: 8px;
+
+}
+
+
+.footer-contact strong {
+
+    color: var(--yellow);
+
+}
+
+
+.footer-bottom {
+
+    padding: 18px 0;
+
+    border-top:
+        1px solid rgba(255,255,255,0.07);
+
+    color: #647184;
+
+    font-size: 9px;
+
+    text-align: center;
+
+}
+
+
+/* =====================================================
+   WHATSAPP
+===================================================== */
+
+.whatsapp {
+
+    position: fixed;
+
+    right: 16px;
+
+    bottom: 16px;
+
+    z-index: 900;
+
+    width: 54px;
+
+    height: 54px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: var(--green);
+
+    color: var(--white);
+
+    font-size: 21px;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.22);
+
+    transition: var(--transition);
+
+}
+
+
+.whatsapp:hover {
+
+    transform: scale(1.08);
+
+}
+
+
+/* =====================================================
+   REVEAL
+===================================================== */
+
+.reveal {
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+
+}
+
+
+.reveal.show {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (min-width: 600px) {
+
+    .container {
+
+        width: calc(100% - 50px);
+
+    }
+
+
+    .hero-buttons {
+
+        flex-direction: row;
+
+    }
+
+
+    .services-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .why-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .projects-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .footer-grid {
+
+        grid-template-columns:
+            1.5fr 1fr 1fr;
+
+    }
+
+}
+
+
+/* =====================================================
+   LAPTOP
+===================================================== */
+
+@media (min-width: 900px) {
+
+    .container {
+
+        width: calc(100% - 70px);
+
+    }
+
+
+    .menu-button {
+
+        display: none;
+
+    }
+
+
+    .nav-links {
+
+        display: flex;
+
+    }
+
+
+    .nav-whatsapp {
+
+        display: inline-flex;
+
+    }
+
+
+    .mobile-menu {
+
+        display: none !important;
+
+    }
+
+
+    .hero-content {
+
+        padding: 100px 0;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 64px;
+
+    }
+
+
+    .hero-text {
+
+        font-size: 14px;
+
+    }
+
+
+    .services,
+    .about,
+    .why,
+    .projects {
+
+        padding: 95px 0;
+
+    }
+
+
+    .section-title {
+
+        font-size: 38px;
+
+    }
+
+
+    .services-grid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+    }
+
+
+    .about-grid {
+
+        grid-template-columns:
+            1.1fr 0.9fr;
+
+        align-items: center;
+
+        gap: 70px;
+
+    }
+
+
+    .why-grid {
+
+        grid-template-columns:
+            repeat(4, 1fr);
+
+    }
+
+
+    .projects-grid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+    }
+
+
+    .cta {
+
+        padding: 75px 0;
+
+    }
+
+
+    .cta-inner {
+
+        flex-direction: row;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+    }
+
+
+    .cta-button {
+
+        flex-shrink: 0;
+
+    }
+
+
+    .footer-grid {
+
+        grid-template-columns:
+            1.5fr 1fr 1fr 1fr;
+
+    }
+
+
+    .footer-bottom {
+
+        text-align: left;
+
+    }
+
+}
+
+
+/* =====================================================
+   LARGE DESKTOP
+===================================================== */
+
+@media (min-width: 1200px) {
+
+    .container {
+
+        width:
+            min(
+                1180px,
+                calc(100% - 80px)
+            );
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 70px;
+
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+
+    .container {
+
+        width: calc(100% - 26px);
+
+    }
+
+
+    .brand-logo {
+
+        width: 43px;
+
+        height: 43px;
+
+    }
+
+
+    .brand-name {
+
+        font-size: 14px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 37px;
+
+    }
+
+}
+
+</style>
+
 </head>
+
+
 <body>
 
-<header>
-    <div class="logo"><a href="index.html">Marqen Solutions</a></div>
 
-    <!-- Navigation links -->
-    <nav class="nav-links" id="navLinks">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
-    <!-- Hamburger icon -->
-    <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
+<header id="header">
+
+    <div class="container">
+
+        <nav class="navbar">
+
+
+            <a href="index.html"
+               class="brand">
+
+                <img src="Logo.jpeg"
+                     alt="Marqen Solutions Logo"
+                     class="brand-logo">
+
+                <div class="brand-name">
+
+                    MARQEN
+
+                    <span>
+                        SOLUTIONS
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <div class="nav-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="services.html">
+                    Services
+                </a>
+
+                <a href="#about">
+                    About
+                </a>
+
+                <a href="#projects">
+                    Projects
+                </a>
+
+                <a href="#contact">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <a href="https://wa.me/966579547328"
+                   target="_blank"
+                   class="nav-whatsapp">
+
+                    WhatsApp
+
+                </a>
+
+
+                <button class="menu-button"
+                        id="menuButton"
+                        aria-label="Open navigation menu">
+
+                    ☰
+
+                </button>
+
+            </div>
+
+        </nav>
+
+
+        <div class="mobile-menu"
+             id="mobileMenu">
+
+
+            <a href="index.html">
+                Home
+            </a>
+
+
+            <a href="services.html">
+                Services
+            </a>
+
+
+            <a href="#about">
+                About
+            </a>
+
+
+            <a href="#projects">
+                Projects
+            </a>
+
+
+            <a href="#contact">
+                Contact
+            </a>
+
+
+            <a href="https://wa.me/966579547328"
+               target="_blank"
+               class="mobile-whatsapp">
+
+                WhatsApp Us
+
+            </a>
+
+        </div>
+
     </div>
+
 </header>
 
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Marqen Solutions Comapany </h1>
-        <p>Marqen Solutions Company for best Quality of Services & Manufacturing in Saudi Arabia, Head quarter in Makkah al Mukarramah.</p>
-        <button onclick="window.location.href='services.html'">Explore Services</button>
-    </section>
 
-    <!-- Footer -->
-    <footer>
-        © 2026 Marqen Solutions — All Rights Reserved.
-    </footer>
+<!-- =====================================================
+     HERO
+===================================================== -->
 
-    <script src="script.js"></script>
+<main>
+
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+
+            <div class="hero-label">
+
+                INSTALLATION • MAINTENANCE • TECHNICAL SERVICES
+
+            </div>
+
+
+            <h1>
+
+                Reliable Technical
+                <span>Solutions for Your Business.</span>
+
+            </h1>
+
+
+            <p class="hero-text">
+
+                Marqen Solutions provides professional
+                installation, repair and maintenance
+                services for commercial businesses across
+                Saudi Arabia.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a href="services.html"
+                   class="btn btn-primary">
+
+                    Explore Our Services
+                    →
+
+                </a>
+
+
+                <a href="https://wa.me/966579547328?text=Hello%20Marqen%20Solutions%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services."
+                   target="_blank"
+                   class="btn btn-secondary">
+
+                    Talk to Us
+                    ↗
+
+                </a>
+
+            </div>
+
+
+            <div class="hero-stats">
+
+
+                <div class="stat">
+
+                    <strong>
+                        6+
+                    </strong>
+
+                    <span>
+                        Core Services
+                    </span>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <strong>
+                        24/7
+                    </strong>
+
+                    <span>
+                        Business Support
+                    </span>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <strong>
+                        KSA
+                    </strong>
+
+                    <span>
+                        Service Coverage
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SERVICES
+===================================================== -->
+
+<section class="services"
+         id="services">
+
+    <div class="container">
+
+
+        <div class="section-heading reveal">
+
+            <div class="section-label">
+
+                WHAT WE DO
+
+            </div>
+
+
+            <h2 class="section-title">
+
+                Our Technical Services
+
+            </h2>
+
+
+            <p class="section-text">
+
+                From equipment repair to electrical
+                systems, security and shop setup,
+                we provide practical technical solutions
+                for businesses.
+
+            </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+
+            <article class="service-card reveal">
+
+                <div class="service-icon">
+                    ⚙
+                </div>
+
+                <h3>
+                    Laundry Equipment
+                </h3>
+
+                <p>
+                    Installation, repair and maintenance
+                    support for commercial laundry equipment.
+                </p>
+
+                <a href="laundry-equipment.html"
+                   class="service-link">
+
+                    Explore Service
+                    <span>→</span>
+
+                </a>
+
+            </article>
+
+
+
+            <article class="service-card reveal">
+
+                <div class="service-icon">
+                    ⚡
+                </div>
+
+                <h3>
+                    Electrical Services
+                </h3>
+
+                <p>
+                    Electrical installation,
+                    troubleshooting and maintenance
+                    for commercial environments.
+                </p>
+
+                <a href="electrical-services.html"
+                   class="service-link">
+
+                    Explore Service
+                    <span>→</span>
+
+                </a>
+
+            </article>
+
+
+
+            <article class="service-card reveal">
+
+                <div class="service-icon">
+                    ◉
+                </div>
+
+                <h3>
+                    CCTV & Security
+                </h3>
+
+                <p>
+                    CCTV and security system installation,
+                    configuration and maintenance.
+                </p>
+
+                <a href="cctv-security.html"
+                   class="service-link">
+
+                    Explore Service
+                    <span>→</span>
+
+                </a>
+
+            </article>
+
+
+
+            <article class="service-card reveal">
+
+                <div class="service-icon">
+                    ⚠
+                </div>
+
+                <h3>
+                    Fire Alarm Systems
+                </h3>
+
+                <p>
+                    Fire alarm installation,
+                    inspection and technical support.
+                </p>
+
+                <a href="fire-alarm.html"
+                   class="service-link">
+
+                    Explore Service
+                    <span>→</span>
+
+                </a>
+
+            </article>
+
+
+
+            <article class="service-card reveal">
+
+                <div class="service-icon">
+                    ▦
+                </div>
+
+                <h3>
+                    Shop Setup
+                </h3>
+
+                <p>
+                    Technical support for new shops,
+                    commercial spaces and facilities.
+                </p>
+
+                <a href="shop-setup.html"
+                   class="service-link">
+
+                    Explore Service
+                    <span>→</span>
+
+                </a>
+
+            </article>
+
+
+
+            <article class="service-card reveal">
+
+                <div class="service-icon">
+                    🔧
+                </div>
+
+                <h3>
+                    Maintenance
+                </h3>
+
+                <p>
+                    Preventive maintenance,
+                    troubleshooting, repairs and
+                    technical support.
+                </p>
+
+                <a href="maintenance.html"
+                   class="service-link">
+
+                    Explore Service
+                    <span>→</span>
+
+                </a>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section class="about"
+         id="about">
+
+    <div class="container">
+
+        <div class="about-grid">
+
+
+            <div class="reveal">
+
+                <div class="section-label">
+
+                    ABOUT MARQEN
+
+                </div>
+
+
+                <h2 class="section-title">
+
+                    Technical Support
+                    Built Around Business Needs.
+
+                </h2>
+
+
+                <p class="section-text">
+
+                    Marqen Solutions provides installation,
+                    maintenance and technical services
+                    designed to support businesses and
+                    commercial operations.
+
+                </p>
+
+
+                <br>
+
+
+                <p class="section-text">
+
+                    Our focus is simple: understand the
+                    requirement, provide a practical
+                    solution and help keep your operation
+                    running smoothly.
+
+                </p>
+
+            </div>
+
+
+            <div class="about-box reveal">
+
+                <strong>
+
+                    We Fix • We Install • We Maintain
+
+                </strong>
+
+
+                <p>
+
+                    From individual equipment repairs to
+                    complete technical setups, Marqen
+                    Solutions aims to provide dependable
+                    service with clear communication and
+                    practical solutions.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     WHY CHOOSE US
+===================================================== -->
+
+<section class="why">
+
+    <div class="container">
+
+
+        <div class="section-heading reveal">
+
+            <div class="section-label">
+
+                WHY MARQEN
+
+            </div>
+
+
+            <h2 class="section-title">
+
+                A Practical Partner
+                for Technical Services.
+
+            </h2>
+
+
+            <p class="section-text">
+
+                We focus on reliability, practical
+                solutions and professional technical
+                support.
+
+            </p>
+
+        </div>
+
+
+        <div class="why-grid">
+
+
+            <article class="why-card reveal">
+
+                <div class="why-icon">
+                    ✓
+                </div>
+
+                <h3>
+                    Reliable Service
+                </h3>
+
+                <p>
+                    Professional technical support
+                    focused on solving the problem.
+                </p>
+
+            </article>
+
+
+
+            <article class="why-card reveal">
+
+                <div class="why-icon">
+                    ⚡
+                </div>
+
+                <h3>
+                    Fast Response
+                </h3>
+
+                <p>
+                    We understand that technical
+                    problems can interrupt business
+                    operations.
+                </p>
+
+            </article>
+
+
+
+            <article class="why-card reveal">
+
+                <div class="why-icon">
+                    ★
+                </div>
+
+                <h3>
+                    Professional Approach
+                </h3>
+
+                <p>
+                    Clear communication and practical
+                    solutions for commercial requirements.
+                </p>
+
+            </article>
+
+
+
+            <article class="why-card reveal">
+
+                <div class="why-icon">
+                    ⚙
+                </div>
+
+                <h3>
+                    Multiple Services
+                </h3>
+
+                <p>
+                    One technical service provider for
+                    multiple business requirements.
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROJECTS
+===================================================== -->
+
+<section class="projects"
+         id="projects">
+
+    <div class="container">
+
+
+        <div class="section-heading reveal">
+
+            <div class="section-label">
+
+                FEATURED PROJECTS
+
+            </div>
+
+
+            <h2 class="section-title">
+
+                The Best of Our Work
+
+            </h2>
+
+
+            <p class="section-text">
+                This is our most recent project
+
+            </p>
+
+        </div>
+
+
+        <div class="projects-grid">
+
+
+            <!-- PROJECT 01 -->
+
+            <article class="project-card reveal">
+
+                <div class="project-number">
+                    →
+                </div>
+
+
+                <div>
+
+                    <div class="project-category">
+
+                        WEB DEVELOPMENT
+
+                    </div>
+
+
+                    <h3>
+
+                        CodeWithEshaal.com
+
+                    </h3>
+
+
+                    <p>
+
+                        A responsive personal web project
+                        focused on web development,
+                        digital skills and professional
+                        online presence.
+
+                    </p>
+
+
+                    <a href="https://codewitheshaal.com"
+                       target="_blank"
+                       class="project-link">
+
+                        Visit Website
+                        ↗
+
+                    </a>
+
+                </div>
+
+            </article>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT CTA
+===================================================== -->
+
+<section class="cta"
+         id="contact">
+
+    <div class="container">
+
+        <div class="cta-inner">
+
+
+            <div>
+
+                <h2>
+
+                    Need a Technical Solution
+                    for Your Business?
+
+                </h2>
+
+
+                <p>
+
+                    Tell us what you need, what equipment
+                    you have or what problem you are facing.
+                    Let's discuss the right solution.
+
+                </p>
+
+            </div>
+
+
+            <a href="https://wa.me/966579547328?text=Hello%20Marqen%20Solutions%2C%20I%20would%20like%20to%20discuss%20a%20technical%20service."
+               target="_blank"
+               class="cta-button">
+
+                Contact Us on WhatsApp
+                ↗
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+
+            <div>
+
+                <a href="index.html"
+                   class="brand">
+
+                    <img src="Logo.jpeg"
+                         alt="Marqen Solutions Logo"
+                         class="brand-logo">
+
+                    <div class="brand-name">
+
+                        MARQEN
+
+                        <span>
+                            SOLUTIONS
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+                <p class="footer-description">
+
+                    Installation, maintenance and
+                    technical services for businesses
+                    across Saudi Arabia.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="footer-links">
+
+                <h3 class="footer-title">
+
+                    Quick Links
+
+                </h3>
+
+
+                <a href="index.html">
+                    Home
+                </a>
+
+
+                <a href="services.html">
+                    Services
+                </a>
+
+
+                <a href="#about">
+                    About
+                </a>
+
+
+                <a href="#projects">
+                    Projects
+                </a>
+
+
+                <a href="#contact">
+                    Contact
+                </a>
+
+            </div>
+
+
+
+            <div class="footer-links">
+
+                <h3 class="footer-title">
+
+                    Services
+
+                </h3>
+
+
+                <a href="laundry-equipment.html">
+                    Laundry Equipment
+                </a>
+
+
+                <a href="electrical-services.html">
+                    Electrical Services
+                </a>
+
+
+                <a href="cctv-security.html">
+                    CCTV & Security
+                </a>
+
+
+                <a href="fire-alarm.html">
+                    Fire Alarm
+                </a>
+
+
+                <a href="shop-setup.html">
+                    Shop Setup
+                </a>
+
+
+                <a href="maintenance.html">
+                    Maintenance
+                </a>
+
+            </div>
+
+
+
+            <div class="footer-contact">
+
+                <h3 class="footer-title">
+
+                    Contact
+
+                </h3>
+
+
+                <p>
+
+                    <strong>
+                        Location
+                    </strong>
+
+                    <br>
+
+                    Saudi Arabia
+
+                </p>
+
+
+                <p>
+
+                    <strong>
+                        Phone
+                    </strong>
+
+                    <br>
+
+                    <a href="tel:+966579547328">
+
+                        057 954 7328
+
+                    </a>
+
+                </p>
+
+
+                <p>
+
+                    <strong>
+                        WhatsApp
+                    </strong>
+
+                    <br>
+
+                    <a href="https://wa.me/966579547328"
+                       target="_blank">
+
+                        Chat with us
+
+                    </a>
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            ©
+            <span id="year"></span>
+            Marqen Solutions.
+            All Rights Reserved.
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     FLOATING WHATSAPP
+===================================================== -->
+
+<a href="https://wa.me/966579547328?text=Hello%20Marqen%20Solutions%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services."
+   target="_blank"
+   class="whatsapp"
+   aria-label="Contact Marqen Solutions on WhatsApp">
+
+    ☎
+
+</a>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+const menuButton =
+    document.getElementById("menuButton");
+
+
+const mobileMenu =
+    document.getElementById("mobileMenu");
+
+
+menuButton.addEventListener(
+    "click",
+    function () {
+
+        mobileMenu.classList.toggle("active");
+
+
+        if (
+            mobileMenu.classList.contains("active")
+        ) {
+
+            menuButton.textContent = "✕";
+
+        } else {
+
+            menuButton.textContent = "☰";
+
+        }
+
+    }
+);
+
+
+
+/* =====================================================
+   CLOSE MOBILE MENU
+===================================================== */
+
+const mobileLinks =
+    mobileMenu.querySelectorAll("a");
+
+
+mobileLinks.forEach(
+    function(link) {
+
+        link.addEventListener(
+            "click",
+            function() {
+
+                mobileMenu.classList.remove("active");
+
+                menuButton.textContent = "☰";
+
+            }
+        );
+
+    }
+);
+
+
+
+/* =====================================================
+   HEADER SCROLL
+===================================================== */
+
+const header =
+    document.getElementById("header");
+
+
+window.addEventListener(
+    "scroll",
+    function() {
+
+        if (window.scrollY > 30) {
+
+            header.classList.add("scrolled");
+
+        } else {
+
+            header.classList.remove("scrolled");
+
+        }
+
+    }
+);
+
+
+
+/* =====================================================
+   REVEAL ANIMATION
+===================================================== */
+
+const revealElements =
+    document.querySelectorAll(".reveal");
+
+
+const observer =
+    new IntersectionObserver(
+        function(entries, observer) {
+
+            entries.forEach(
+                function(entry) {
+
+                    if (
+                        entry.isIntersecting
+                    ) {
+
+                        entry.target.classList.add("show");
+
+                        observer.unobserve(
+                            entry.target
+                        );
+
+                    }
+
+                }
+            );
+
+        },
+        {
+            threshold: 0.10
+        }
+    );
+
+
+revealElements.forEach(
+    function(element) {
+
+        observer.observe(element);
+
+    }
+);
+
+
+
+/* =====================================================
+   CURRENT YEAR
+===================================================== */
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+
+</script>
+
+
 </body>
+
 </html>
